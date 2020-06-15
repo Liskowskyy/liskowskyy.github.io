@@ -1,5 +1,9 @@
----0.0.1---
+UPDATE #1
 First release
 
----0.0.2---
+UPDATE #2
 Added mode selection, which allows the user to select which axes will be included in the translation.
+
+UPDATE #3
+Switched version marking system (Old: 0.0.3/New: UPDATE #3).
+Added AnCap and centrism easter eggs.
