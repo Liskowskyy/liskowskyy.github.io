@@ -34,7 +34,17 @@ function doit()
 		img.id = "chart";
 	}
 	axisx = (mm-50)/5;
-	axisy = ((50-aa)/5+(uu-50)/5+(50-ee)/5)/3;
+	
+	var e = document.getElementById("mode");
+	var mode = e.options[e.selectedIndex].value;
+	if(mode == "standard")
+	{
+		axisy = ((50-aa)/5+(uu-50)/5+(50-ee)/5)/3;
+	}
+	else if(mode == "classic")
+	{
+		axisy = (uu-50)/5;
+	}
 	img.src="https://www.politicalcompass.org/chart?ec="+axisx;
 	 x = img.src;
 	img.src=x+"&amp;soc="+axisy;
