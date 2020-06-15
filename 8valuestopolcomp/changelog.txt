@@ -1,0 +1,5 @@
+---0.0.1---
+First release
+
+---0.0.2---
+Added mode selection, which allows the user to select which axes will be included in the translation.
