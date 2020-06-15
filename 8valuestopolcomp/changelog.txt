@@ -7,3 +7,9 @@ Added mode selection, which allows the user to select which axes will be include
 UPDATE #3
 Switched version marking system (Old: 0.0.3/New: UPDATE #3).
 Added AnCap and centrism easter eggs.
+
+UPDATE #3 HOTFIX
+Fixed a bug with centrism easter egg.
+
+UPDATE #4
+Added a favicon.
