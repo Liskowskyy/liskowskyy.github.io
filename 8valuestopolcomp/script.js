@@ -49,7 +49,7 @@ function doit()
 	 x = img.src;
 	img.src=x+"&amp;soc="+axisy;
 	
-	if(axisx <= 1 && axisy <= 1)
+	if(axisx <= 1 && axisy <= 1 && axisx >= -1 && axisy >= 1)
 	{
 		document.getElementById("easteregg").innerHTML = "How is it to be in the center? Are you even interested in politics? Or you're just to afraid to accidentally offend someone? Or maybe you're a far-centrist? Or... whatever.";
 	}
