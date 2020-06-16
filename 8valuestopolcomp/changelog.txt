@@ -35,3 +35,7 @@ UPDATE #7
 UPDATE #8
 •Added a ideological reference image on the right.
 •Adjusted centrism and AnCap easter eggs' coordinates.
+
+UPDATE #9
+•The favicon is now higher quality.
+•The favicon has now got the exact colors of political compass' quadrants.
