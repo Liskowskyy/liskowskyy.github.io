@@ -49,6 +49,8 @@ function doit()
 	{
 		axisy = ((50-aa)/5+(uu-50)/5*5+(50-ee)/5)/7;
 	}
+	axisx=Math.round((axisx + Number.EPSILON) * 100) / 100
+	axisy=Math.round((axisy + Number.EPSILON) * 100) / 100
 	img.src="https://www.politicalcompass.org/chart?ec="+axisx;
 	 x = img.src;
 	img.src=x+"&amp;soc="+axisy;
@@ -65,4 +67,5 @@ function doit()
 	{
 		document.getElementById("easteregg").innerHTML = "";
 	}
+	document.getElementById("coordinates").innerHTML = "X Axis: "+axisx+" Y Axis: "+axisy;
 }
