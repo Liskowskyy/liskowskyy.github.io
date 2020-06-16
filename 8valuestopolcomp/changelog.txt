@@ -31,3 +31,7 @@ UPDATE #7
 •Corrected a misspelling of "too"
 •The favicon should now work (shouldn't it?)
 •HOTFIX: There's a higher probability that the favicon will work, as I added the missing quotation mark.
+
+UPDATE #8
+•Added a ideological reference image on the right.
+•Adjusted centrism and AnCap easter eggs' coordinates.

@@ -33,6 +33,16 @@ function doit()
 		document.getElementById('body').appendChild(img); 
 		img.id = "chart";
 	}
+	
+	check = document.getElementById("ideologieschart");
+	if (check == null)
+	{
+		ideo = document.createElement('img'); 
+		document.getElementById('body').appendChild(ideo); 
+		ideo.id = "ideologieschart";
+		ideo.src = "img/ideologiestrans.png";
+	}
+
 	axisx = (mm-50)/5;
 	
 	var e = document.getElementById("mode");
@@ -55,15 +65,15 @@ function doit()
 	 x = img.src;
 	img.src=x+"&amp;soc="+axisy;
 	
-	if(axisx <= 1 && axisy <= 1 && axisx >= -1 && axisy >= -1)
+	if(axisx <= 3 && axisy <= 3 && axisx >= -3 && axisy >= -3)
 	{
 		document.getElementById("easteregg").innerHTML = "How is it to be in the center? Are you even interested in politics? Or you're just to afraid to accidentally offend someone? Or maybe you're a far-centrist? Or... whatever.";
 	}
-	else if(axisx >= 8 && axisy <= -8)
+	else if(axisx >= 7.5 && axisy <= -5.5)
 	{
 		document.getElementById("easteregg").innerHTML = "Tell me, how will it be in AnCap?";
 	}
-	else if(axisx <= 1 && axisx >= -1 && axisy >= 9)
+	else if(axisx <= 7.5 && axisx >= -6 && axisy >= 9)
 	{
 		document.getElementById("easteregg").innerHTML = "Well, there was once this Austrian painter who was rejected from an art school...";
 	}
