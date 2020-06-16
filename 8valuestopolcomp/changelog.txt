@@ -1,15 +1,21 @@
 UPDATE #1
-First release
+•First release
 
 UPDATE #2
-Added mode selection, which allows the user to select which axes will be included in the translation.
+•Added mode selection, which allows the user to select which axes will be included in the translation.
 
 UPDATE #3
-Switched version marking system (Old: 0.0.3/New: UPDATE #3).
-Added AnCap and centrism easter eggs.
+•Switched version marking system (Old: 0.0.3/New: UPDATE #3).
+•Added AnCap and centrism easter eggs.
 
 UPDATE #3 HOTFIX
-Fixed a bug with centrism easter egg.
+•Fixed a bug with centrism easter egg.
 
 UPDATE #4
-Added a favicon.
+•Added a favicon.
+
+UPDATE #5
+•Replaced axis names with icons, so it looks more aesthetic.
+•Added standard balanced mode, which prevents authoritarian results from getting into the libertarian quadrants by simultaneously having globalistic and progressive views. Current balance: 5*Liberty, 1*Nation, 1*Tradition.
+•Added left margin
+•Added license, because of having used 8values images for axis marking.

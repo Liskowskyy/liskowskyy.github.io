@@ -45,6 +45,10 @@ function doit()
 	{
 		axisy = (uu-50)/5;
 	}
+	else if(mode == "balance")
+	{
+		axisy = ((50-aa)/5+(uu-50)/5*5+(50-ee)/5)/7;
+	}
 	img.src="https://www.politicalcompass.org/chart?ec="+axisx;
 	 x = img.src;
 	img.src=x+"&amp;soc="+axisy;
