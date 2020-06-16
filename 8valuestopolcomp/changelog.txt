@@ -33,7 +33,7 @@ UPDATE #7
 •HOTFIX: There's a higher probability that the favicon will work, as I added the missing quotation mark.
 
 UPDATE #8
-•Added a ideological reference image on the right.
+•Added a ideology reference image on the right.
 •Adjusted centrism and AnCap easter eggs' coordinates.
 
 UPDATE #9
@@ -41,3 +41,7 @@ UPDATE #9
 •The favicon has now got the exact colors of political compass' quadrants.
 •HOTFIX Made the lines in favicon thicker
 •HOTFIX Made the favicon ever higher quality
+
+UPDATE #10
+•Updated the ideology reference to a more reliable one.
+•Added a link to the full resolution image file.

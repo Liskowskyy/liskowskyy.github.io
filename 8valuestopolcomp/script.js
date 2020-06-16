@@ -40,7 +40,10 @@ function doit()
 		ideo = document.createElement('img'); 
 		document.getElementById('body').appendChild(ideo); 
 		ideo.id = "ideologieschart";
-		ideo.src = "img/ideologiestrans.png";
+		ideo.src = "img/ideologies_v2.png";
+		ideo.style.height = "400px";
+		ideo.style.width = "480px";
+		document.getElementById("notice").innerHTML ="The image on the right isn't low quality, you need to zoom in. Optionally, you can click "+"<a href='"+"img/ideologies_v2.png"+"'>here</a>"+" to view the full image alone.";
 	}
 
 	axisx = (mm-50)/5;
@@ -81,6 +84,5 @@ function doit()
 	{
 		document.getElementById("easteregg").innerHTML = "";
 	}
-	
 	document.getElementById("coordinates").innerHTML = "X Axis: "+axisx+" Y Axis: "+axisy;
 }
