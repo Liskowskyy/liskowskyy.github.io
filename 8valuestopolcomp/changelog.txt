@@ -30,3 +30,4 @@ UPDATE #7
 •Added a reference to an infamous "painter".
 •Corrected a misspelling of "too"
 •The favicon should now work (shouldn't it?)
+•HOTFIX: There's a higher probability that the favicon will work, as I added the missing quotation mark.
