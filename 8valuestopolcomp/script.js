@@ -63,9 +63,14 @@ function doit()
 	{
 		document.getElementById("easteregg").innerHTML = "Tell me, how will it be in AnCap?";
 	}
+	else if(axisx <= 1 && axisx >= -1 && axisy >= 9)
+	{
+		document.getElementById("easteregg").innerHTML = "Well, there was once this Austrian painter who was rejected from an art school...";
+	}
 	else
 	{
 		document.getElementById("easteregg").innerHTML = "";
 	}
+	
 	document.getElementById("coordinates").innerHTML = "X Axis: "+axisx+" Y Axis: "+axisy;
 }

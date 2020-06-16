@@ -19,8 +19,14 @@ UPDATE #5
 •Added standard balanced mode, which prevents authoritarian results from getting into the libertarian quadrants by simultaneously having globalistic and progressive views. Current balance: 5*Liberty, 1*Nation, 1*Tradition.
 •Added left margin
 •Added license, because of having used 8values images for axis marking.
+•Added a nice light blue background (totally forgot about including this in the changelog, this was first mentionted with the realease of #7)
 
 UPDATE #6
 •Now you can easily see your exact X and Y coordinates.
 •X and Y are now rounded to two numbers after comma, even though couldn't see this before.
 •Standard Balanced is now selected by default.
+
+UPDATE #7
+•Added a reference to an infamous "painter".
+•Corrected a misspelling of "too"
+•The favicon should now work (shouldn't it?)
