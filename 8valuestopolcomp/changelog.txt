@@ -48,3 +48,6 @@ UPDATE #10
 
 UPDATE #11
 •The image now opens in a new tab.
+
+UPDATE #12
+•The browser is now forced to update the *.js file.
