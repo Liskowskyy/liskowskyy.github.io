@@ -85,4 +85,57 @@ function doit()
 		document.getElementById("easteregg").innerHTML = "";
 	}
 	document.getElementById("coordinates").innerHTML = "X Axis: "+axisx+" Y Axis: "+axisy;
+	   
+
+	
+    economicsArray = ["Communist","Socialist","Social","Centrist","Market","Capitalist","Laissez-Faire"]
+    peaceArray = ["Cosmopolitan","Internationalist","Peaceful","Balanced","Patriotic","Nationalist","Chauvinist"]
+    authorityArray = ["Anarchist","Libertarian","Liberal","Moderate","Statist","Authoritarian","Totalitarian"]
+    progressArray = ["Revolutionary","Very Progressive","Progressive","Neutral","Traditional","Very Traditional","Reactionary"]
+	
+        if (eqpt > 100) { eqlabel = "" } else
+        if (eqpt > 90) { eqlabel = economicsArray[0] } else
+        if (eqpt > 75) { eqlabel = economicsArray[1] } else
+        if (eqpt > 60) { eqlabel = economicsArray[2] } else
+        if (eqpt >= 40) { eqlabel = economicsArray[3] } else
+        if (eqpt >= 25) { eqlabel = economicsArray[4] } else
+        if (eqpt >= 10) { eqlabel = economicsArray[5] } else
+        if (eqpt >= 0) { eqlabel = economicsArray[6] } else
+        	{}
+			
+		if (wdpt > 100) { wdlabel = "" } else
+        if (wdpt > 90) { wdlabel = peaceArray[0] } else
+        if (wdpt > 75) { wdlabel = peaceArray[1] } else
+        if (wdpt > 60) { wdlabel = peaceArray[2] } else
+        if (wdpt >= 40) { wdlabel = peaceArray[3] } else
+        if (wdpt >= 25) { wdlabel = peaceArray[4] } else
+        if (wdpt >= 10) { wdlabel = peaceArray[5] } else
+        if (wdpt >= 0) { wdlabel = peaceArray[6] } else
+        	{}
+			
+		if (lbpt > 100) { lblabel = "" } else
+        if (lbpt > 90) { lblabel = authorityArray[0] } else
+        if (lbpt > 75) { lblabel = authorityArray[1] } else
+        if (lbpt > 60) { lblabel = authorityArray[2] } else
+        if (lbpt >= 40) { lblabel = authorityArray[3] } else
+        if (lbpt >= 25) { lblabel = authorityArray[4] } else
+        if (lbpt >= 10) { lblabel = authorityArray[5] } else
+        if (lbpt >= 0) { lblabel = authorityArray[6] } else
+        	{}
+			
+		if (pgpt > 100) { pglabel = "" } else
+        if (pgpt > 90) { pglabel = progressArray[0] } else
+        if (pgpt > 75) { pglabel = progressArray[1] } else
+        if (pgpt > 60) { pglabel = progressArray[2] } else
+        if (pgpt >= 40) { pglabel = progressArray[3] } else
+        if (pgpt >= 25) { pglabel = progressArray[4] } else
+        if (pgpt >= 10) { pglabel = progressArray[5] } else
+        if (pgpt >= 0) { pglabel = progressArray[6] } else
+        	{}
+			
+			document.getElementById("economics").innerHTML = eqlabel;
+			document.getElementById("peace").innerHTML = wdlabel;
+			document.getElementById("authority").innerHTML = lblabel;
+			document.getElementById("tradition").innerHTML = pglabel;
+
 }
