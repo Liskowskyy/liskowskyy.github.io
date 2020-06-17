@@ -43,7 +43,7 @@ function doit()
 		ideo.src = "img/ideologies_v2.png";
 		ideo.style.height = "400px";
 		ideo.style.width = "480px";
-		document.getElementById("notice").innerHTML ="The image on the right isn't low quality, you need to zoom in. Optionally, you can click "+"<a href='"+"img/ideologies_v2.png"+'"'+" target="+'"_blank'+"'>here</a>"+" to view the full image alone.";
+		document.getElementById("notice").innerHTML ="The image on the right isn't low quality, you need to zoom in. Optionally, you can click "+'<a href="img/ideologies_v2.png" target="_blank">here</a>'+" to view the full image alone.";
 	}
 
 	axisx = (mm-50)/5;
