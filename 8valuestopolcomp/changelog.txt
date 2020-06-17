@@ -51,3 +51,4 @@ UPDATE #11
 
 UPDATE #12
 •The browser is now forced to update the *.js file.
+•HOTFIX fixed an unclosed div element.
