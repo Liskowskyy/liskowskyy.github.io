@@ -45,3 +45,6 @@ UPDATE #9
 UPDATE #10
 •Updated the ideology reference to a more reliable one.
 •Added a link to the full resolution image file.
+
+UPDATE #11
+•The image now opens in a new tab.
