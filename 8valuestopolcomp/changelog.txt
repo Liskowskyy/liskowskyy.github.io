@@ -61,3 +61,6 @@ UPDATE #14
 •X and Y coordinates are now not in the same line to improve readability
 •Removed current compass reference, seeking better replacement
 •Added new easter eggs.
+
+UPDATE #15
+•The compass is now generated client-side, instead of using another site.

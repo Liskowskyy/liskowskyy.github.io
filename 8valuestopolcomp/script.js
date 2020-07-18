@@ -26,27 +26,6 @@ document.getElementById("pgmt").innerHTML = pgpt+"%";
 
 function doit()
 {
-	check = document.getElementById("chart");
-	if (check == null)
-	{
-		img = document.createElement('img'); 
-		document.getElementById('body').appendChild(img); 
-		img.id = "chart";
-	}
-/*	
-	check = document.getElementById("ideologieschart");
-	if (check == null)
-	{
-		ideo = document.createElement('img'); 
-		document.getElementById('body').appendChild(ideo); 
-		ideo.id = "ideologieschart";
-		ideo.src = "img/ideologies_v2.png";
-		ideo.style.height = "400px";
-		ideo.style.width = "480px";
-		document.getElementById("notice").innerHTML ="The image on the right isn't low quality, you need to zoom in. Optionally, you can click "+'<a href="img/ideologies_v2.png" target="_blank">here</a>'+" to view the full image alone.";
-	}                        
-*/
-
 	axisx = (mm-50)/5;
 	
 	var e = document.getElementById("mode");
@@ -65,9 +44,19 @@ function doit()
 	}
 	axisx=Math.round((axisx + Number.EPSILON) * 100) / 100
 	axisy=Math.round((axisy + Number.EPSILON) * 100) / 100
-	img.src="https://www.politicalcompass.org/chart?ec="+axisx;
-	 x = img.src;
-	img.src=x+"&amp;soc="+axisy;
+	
+	axisxpoint = (axisx*5+50)*4;
+	axisypoint = (-axisy*5+50)*4;
+	
+	var canvas = document.getElementById("point");
+	var ctx = canvas.getContext("2d");
+	ctx.clearRect(0, 0, 400, 400);
+	ctx.drawImage(source, 0, 0);
+	ctx.beginPath();
+	ctx.arc(axisxpoint,axisypoint,8,0,2*Math.PI);
+	ctx.fillStyle = "red";
+	ctx.fill();
+	ctx.stroke();
 	
 	randomizeegg = Math.floor(Math.random() * 2);
 	
