@@ -33,7 +33,7 @@ function doit()
 		document.getElementById('body').appendChild(img); 
 		img.id = "chart";
 	}
-	
+/*	
 	check = document.getElementById("ideologieschart");
 	if (check == null)
 	{
@@ -44,7 +44,8 @@ function doit()
 		ideo.style.height = "400px";
 		ideo.style.width = "480px";
 		document.getElementById("notice").innerHTML ="The image on the right isn't low quality, you need to zoom in. Optionally, you can click "+'<a href="img/ideologies_v2.png" target="_blank">here</a>'+" to view the full image alone.";
-	}
+	}                        
+*/
 
 	axisx = (mm-50)/5;
 	
@@ -68,9 +69,15 @@ function doit()
 	 x = img.src;
 	img.src=x+"&amp;soc="+axisy;
 	
-	if(axisx <= 3 && axisy <= 3 && axisx >= -3 && axisy >= -3)
+	randomizeegg = Math.floor(Math.random() * 2);
+	
+	if(axisx <= 3 && axisy <= 3 && axisx >= -3 && axisy >= -3 && randomizeegg==0)
 	{
 		document.getElementById("easteregg").innerHTML = "How is it to be in the center? Are you even interested in politics? Or you're just to afraid to accidentally offend someone? Or maybe you're a far-centrist? Or... whatever.";
+	}
+	else if(axisx <= 3 && axisy <= 3 && axisx >= -3 && axisy >= -3 && randomizeegg==1)
+	{
+		document.getElementById("easteregg").innerHTML = 'All the media says is "RACISM, SHOOTINGS, SOCIALISM, KKK"'+"<br/>"+"I just wanna grill for God\'s sake";
 	}
 	else if(axisx >= 7.5 && axisy <= -5.5)
 	{
@@ -80,11 +87,16 @@ function doit()
 	{
 		document.getElementById("easteregg").innerHTML = "Well, there was once this Austrian painter who was rejected from an art school...";
 	}
+	else if(axisx <= 3 && axisx >= 0 && axisy <= -8.5)
+	{
+		document.getElementById("easteregg").innerHTML = "Fun fact: Your result is similar to the author's"+"<br/>"+"(2.4, -8.94) 7/18/2020";
+	}
+	
 	else
 	{
 		document.getElementById("easteregg").innerHTML = "";
 	}
-	document.getElementById("coordinates").innerHTML = "X Axis: "+axisx+" Y Axis: "+axisy;
+	document.getElementById("coordinates").innerHTML = "X Axis: "+axisx+ "<br/>" +"Y Axis: "+axisy;
 	   
 
 	

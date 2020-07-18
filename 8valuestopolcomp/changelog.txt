@@ -55,3 +55,9 @@ UPDATE #12
 
 UPDATE #13
 •Axis matches are now shown.
+
+UPDATE #14
+•Removed the notice
+•X and Y coordinates are now not in the same line to improve readability
+•Removed current compass reference, seeking better replacement
+•Added new easter eggs.
