@@ -32,6 +32,12 @@ function drawpoint()
 	userx = (userx*5+50)*4;
 	usery = document.getElementById("usery").value;
 	usery = (-usery*5+50)*4;
+	if(userx>10 || userx<-10 || usery>10 || usery<-10)
+	{
+		alert("Number must be within the range of -10 and 10");
+	}
+	else
+{
 	
 	if(autonumber==1)
 	{
@@ -126,6 +132,7 @@ function drawpoint()
 	lastposx = userx;
 	lastposy = usery;
 	autonumber++;
+}
 }
 
 function downloadcanvas()
