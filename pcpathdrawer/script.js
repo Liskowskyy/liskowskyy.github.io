@@ -32,7 +32,7 @@ function drawpoint()
 	userx = (userx*5+50)*4;
 	usery = document.getElementById("usery").value;
 	usery = (-usery*5+50)*4;
-	if(userx>400 || userx<-400 || usery>400 || usery<-400)
+	if(userx>400 || userx<0 || usery>400 || usery<0)
 	{
 		alert("Number must be within the range of -10 and 10");
 	}
