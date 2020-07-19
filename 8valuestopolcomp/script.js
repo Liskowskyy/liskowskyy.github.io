@@ -52,11 +52,38 @@ function doit()
 	var ctx = canvas.getContext("2d");
 	ctx.clearRect(0, 0, 400, 400);
 	ctx.drawImage(source, 0, 0);
-	ctx.beginPath();
-	ctx.arc(axisxpoint,axisypoint,8,0,2*Math.PI);
-	ctx.fillStyle = "red";
-	ctx.fill();
-	ctx.stroke();
+	
+	if(axisx == 2 && axisy == 1.37)
+	{
+		var thumbImg = document.createElement('img');
+
+		thumbImg.src = 'img/papiez.png';
+		thumbImg.onload = function() 
+		{
+		ctx.save();
+		ctx.beginPath();
+		ctx.arc(axisxpoint, axisypoint, 16, 0, Math.PI * 2, true);
+		ctx.closePath();
+		ctx.clip();
+
+		ctx.drawImage(thumbImg, axisxpoint-16, axisypoint-16, 32, 32);
+
+		ctx.beginPath();
+		ctx.arc(axisxpoint, axisypoint, 16, 0, Math.PI * 2, true);
+		ctx.clip();
+		ctx.stroke();
+		ctx.closePath();
+		ctx.restore();
+		};
+	}
+	else
+	{
+		ctx.beginPath();
+		ctx.arc(axisxpoint,axisypoint,8,0,2*Math.PI);
+		ctx.fillStyle = "red";
+		ctx.fill();
+		ctx.stroke();
+	}
 	
 	randomizeegg = Math.floor(Math.random() * 2);
 	
@@ -80,7 +107,18 @@ function doit()
 	{
 		document.getElementById("easteregg").innerHTML = "Fun fact: Your result is similar to the author's"+"<br/>"+"(2.4, -8.94) 7/18/2020";
 	}
-	
+	if(axisx == 2 && axisy == 1.37 && randomizeegg==0)
+	{
+		var audio = new Audio('papiez1.mp3');
+		audio.play();
+		document.getElementById("easteregg").innerHTML = "How is it to be in the center? Are you even interested in politics? Or you're just to afraid to accidentally offend someone? Or maybe you're a far-centrist? Or... whatever.";
+	}
+	else if(axisx == 2 && axisy == 1.37 && randomizeegg==1)
+	{
+		var audio = new Audio('papiez2.mp3');
+		audio.play();
+		document.getElementById("easteregg").innerHTML = 'All the media says is "RACISM, SHOOTINGS, SOCIALISM, KKK"'+"<br/>"+"I just wanna grill for God\'s sake";
+	}
 	else
 	{
 		document.getElementById("easteregg").innerHTML = "";

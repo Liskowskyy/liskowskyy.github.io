@@ -64,3 +64,6 @@ UPDATE #14
 
 UPDATE #15
 •The compass is now generated client-side, instead of using another site.
+
+UPDATE #16
+•New easter eggs
