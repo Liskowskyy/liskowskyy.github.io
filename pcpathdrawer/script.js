@@ -1,6 +1,7 @@
 var canvas = document.getElementById("point");
 var ctx = canvas.getContext("2d");
 var autonumber = 1;
+var downloadcanvas = document.getElementById("point");
 
 function reset()
 {
@@ -40,9 +41,4 @@ function drawpoint()
 	halfr = userradius/2;
 	ctx.fillText(autonumber, userx, usery+halfr);
 	autonumber++;
-	
-	var c=document.getElementById("point");
-	var d=c.toDataURL("image/png");
-	var w=window.open('about:blank','image from canvas');
-	w.document.write("<img src='"+d+"' alt='from canvas'/>");
 }
