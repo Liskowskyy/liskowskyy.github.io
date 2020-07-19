@@ -1,5 +1,9 @@
 var canvas = document.getElementById("point");
 var ctx = canvas.getContext("2d");
+fromx = 0;
+fromy = 0;
+lastposx = 0;
+lastposy = 0;
 
 function reset()
 {
@@ -29,16 +33,96 @@ function drawpoint()
 	usery = document.getElementById("usery").value;
 	usery = (-usery*5+50)*4;
 	
-	ctx.beginPath();
-	ctx.arc(userx,usery,userradius,0,2*Math.PI);
-	ctx.fillStyle = usercolor;
-	ctx.fill();
-	ctx.stroke();
-	ctx.fillStyle = "black";
-	ctx.font = userradius*1.22+"px Roboto Condensed";
-	ctx.textAlign = "center";
-	halfr = userradius/2;
-	ctx.fillText(autonumber, userx, usery+halfr);
+	if(autonumber==1)
+	{
+		ctx.beginPath();
+		ctx.arc(userx,usery,userradius,0,2*Math.PI);
+		ctx.fillStyle = usercolor;
+		ctx.fill();
+		ctx.stroke();
+		ctx.fillStyle = "black";
+		ctx.font = userradius*1.22+"px Roboto Condensed";
+		ctx.textAlign = "center";
+		halfr = userradius/2;
+		ctx.fillText(autonumber, userx, usery+halfr);
+	}
+	else if(autonumber>=2)
+	{
+		if(userx>lastposx && usery<lastposy)
+		{
+			fromx = lastposx+userradius;
+			fromy = lastposy;
+			tox = userx;
+			toy = usery+userradius;
+		}
+		else if(userx<lastposx && usery<lastposy)
+		{
+			fromx = lastposx-userradius;
+			fromy = lastposy;
+			tox = userx+userradius;
+			toy = usery;
+		}
+		else if(userx<lastposx && usery>lastposy)
+		{
+			fromx = lastposx;
+			fromy = lastposy+userradius;
+			tox = userx;
+			toy = usery+userradius;
+		}
+		else if(userx>lastposx && usery>lastposy)
+		{
+			fromx = lastposx+userradius;
+			fromy = lastposy;
+			tox = userx-userradius;
+			toy = usery;
+		}
+		else if(usery<lastposy)
+		{
+			fromx = lastposx;
+			fromy = lastposy-userradius;
+			tox = userx;
+			toy = usery+userradius;
+		}
+		else if(userx<lastposx)
+		{
+			fromx = lastposx-userradius;
+			fromy = lastposy;
+			tox = userx+userradius;
+			toy = usery;
+		}
+		else if(usery>lastposy)
+		{
+			fromx = lastposx;
+			fromy = lastposy+userradius;
+			tox = userx;
+			toy = usery-userradius;
+		}
+		else if(userx>lastposx)
+		{
+			fromx = lastposx+userradius;
+			fromy = lastposy;
+			tox = userx-userradius;
+			toy = usery;
+		}
+		
+		
+		ctx.beginPath();
+		ctx.moveTo(fromx, fromy);
+		ctx.lineTo(tox, toy);
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.arc(userx,usery,userradius,0,2*Math.PI);
+		ctx.fillStyle = usercolor;
+		ctx.fill();
+		ctx.stroke();
+		ctx.fillStyle = "black";
+		ctx.font = userradius*1.22+"px Roboto Condensed";
+		ctx.textAlign = "center";
+		halfr = userradius/2;
+		ctx.fillText(autonumber, userx, usery+halfr);
+	}
+	lastposx = userx;
+	lastposy = usery;
 	autonumber++;
 }
 
