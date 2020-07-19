@@ -1,11 +1,11 @@
 var canvas = document.getElementById("point");
 var ctx = canvas.getContext("2d");
-var autonumber = 1;
 
 function reset()
 {
 	ctx.clearRect(0, 0, 400, 400);
 	ctx.drawImage(source, 0, 0);
+	autonumber = 1;
 }
 
 function userreset()
