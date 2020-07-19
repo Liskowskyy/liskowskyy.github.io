@@ -35,7 +35,7 @@ function drawpoint()
 	ctx.fill();
 	ctx.stroke();
 	ctx.fillStyle = "black";
-	ctx.font = userradius+"px Arial";
+	ctx.font = userradius+"px Roboto Condensed";
 	ctx.textAlign = "center";
 	halfr = userradius/2;
 	ctx.fillText(autonumber, userx, usery+halfr);
