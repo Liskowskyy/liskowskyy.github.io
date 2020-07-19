@@ -18,9 +18,8 @@
 <label>X: </label><input type="number" id="userx" value="0" placeholder="1.0" step="0.01" min="-10" max="10">
 <label>Y: </label><input type="number" id="usery" value="0" placeholder="1.0" step="0.01" min="-10" max="10">
 <button onClick="drawpoint()">Draw!</button></br></br><button onClick="userreset()">Reset</button></br></br>
-<canvas id="point" width="400" height="400"
-style="border:3px solid #000000;">
-<img id="source" src="compass.png">
+<canvas id="point" width="400" height="400" style="border:3px solid #000000;max-width:100%;height:auto;">
+<img id="source" src="compass.png" style="max-width:100%;height:auto;">
 </canvas>
 </br></br>
 <button onClick="downloadcanvas()">Download</button>
