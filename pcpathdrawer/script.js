@@ -142,3 +142,17 @@ function downloadcanvas()
   link.href = document.getElementById('point').toDataURL()
   link.click();
 }
+
+function collapse()
+{
+	if(document.getElementById('customize').style.display == "none")
+	{
+		document.getElementById('customize').style.display = "initial";
+		document.getElementById('tri').innerHTML = "▲";
+	}
+	else
+	{
+		document.getElementById('customize').style.display = "none";
+		document.getElementById('tri').innerHTML = "▼";
+	}
+}

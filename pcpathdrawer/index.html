@@ -9,11 +9,12 @@
 <body onload="reset()">
 <center>
 <h1>Political Compass Path Drawer</h1>
-<h2>Point Customization</h2>
+<div id="line1"><h2>Point Customization</h2></div><div id="line2"><a href="javascript:collapse()"><h2 id="tri">▲</h2></a></div></br>
+<div id="customize">
 <label>Color: </label><input type="color" id="usercolor" value="#FF0000"></br></br>
 <label>Radius: </label><input type="number" id="userradius" value="8" min="1" max="300"></br></br>
 <label>Draw lines: </label><input type="checkbox" id="userline" checked="true">
-
+</div>
 <h2>Point Drawing</h2>
 <label>X: </label><input type="number" id="userx" value="0" placeholder="1.0" step="0.01" min="-10" max="10">
 <label>Y: </label><input type="number" id="usery" value="0" placeholder="1.0" step="0.01" min="-10" max="10">
