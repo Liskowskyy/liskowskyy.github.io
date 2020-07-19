@@ -67,3 +67,6 @@ UPDATE #15
 
 UPDATE #16
 •New easter eggs
+
+UPDATE #17
+•Fixed a bug that broke nearly all the easter eggs.

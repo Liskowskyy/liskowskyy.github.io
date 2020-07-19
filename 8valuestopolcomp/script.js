@@ -74,6 +74,10 @@ function doit()
 		ctx.stroke();
 		ctx.closePath();
 		ctx.restore();
+		pope = Math.floor(Math.random() * 2) + 1;
+		var audio = new Audio('papiez'+pope+'.mp3');
+		audio.play();
+		document.getElementById("easteregg").innerHTML = "After school exams we were going for creampies - John Paul II";
 		};
 	}
 	else
@@ -84,8 +88,6 @@ function doit()
 		ctx.fill();
 		ctx.stroke();
 	}
-	
-	randomizeegg = Math.floor(Math.random() * 2);
 	
 	if(axisx <= 3 && axisy <= 3 && axisx >= -3 && axisy >= -3 && randomizeegg==0)
 	{
@@ -106,18 +108,6 @@ function doit()
 	else if(axisx <= 3 && axisx >= 0 && axisy <= -8.5)
 	{
 		document.getElementById("easteregg").innerHTML = "Fun fact: Your result is similar to the author's"+"<br/>"+"(2.4, -8.94) 7/18/2020";
-	}
-	if(axisx == 2 && axisy == 1.37 && randomizeegg==0)
-	{
-		var audio = new Audio('papiez1.mp3');
-		audio.play();
-		document.getElementById("easteregg").innerHTML = "How is it to be in the center? Are you even interested in politics? Or you're just to afraid to accidentally offend someone? Or maybe you're a far-centrist? Or... whatever.";
-	}
-	else if(axisx == 2 && axisy == 1.37 && randomizeegg==1)
-	{
-		var audio = new Audio('papiez2.mp3');
-		audio.play();
-		document.getElementById("easteregg").innerHTML = 'All the media says is "RACISM, SHOOTINGS, SOCIALISM, KKK"'+"<br/>"+"I just wanna grill for God\'s sake";
 	}
 	else
 	{
