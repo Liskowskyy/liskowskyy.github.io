@@ -2,6 +2,6 @@ body {font-family: 'Roboto Condensed', sans-serif; background-color: #94bdff;}
 h1 {font-size: 48px; font-weight: bold;}
 h2 {font-size: 24px; font-weight: bold;}
 h3 {font-size: 18px; font-weight: normal;}
-a { color: inherit; text-decoration:none; } 
+a { color: inherit; text-decoration:none;} 
 #line1 {display:inline-block;margin-right:10px;}
 #line2 {display:inline-block;}
