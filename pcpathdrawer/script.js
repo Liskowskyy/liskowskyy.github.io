@@ -42,7 +42,8 @@ function drawpoint()
 	autonumber++;
 }
 
-var download = function(){
+function downloadcanvas()
+{
   var link = document.createElement('a');
   link.download = 'filename.png';
   link.href = document.getElementById('point').toDataURL()
