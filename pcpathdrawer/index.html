@@ -24,12 +24,13 @@
 <h2>Point Drawing</h2>
 <label>X: </label><input type="number" id="userx" value="0" placeholder="1.0" step="0.01" min="-10" max="10">
 <label>Y: </label><input type="number" id="usery" value="0" placeholder="1.0" step="0.01" min="-10" max="10">
-<button onClick="drawpoint()">Draw!</button></br><button onClick="userreset()">Reset</button></br></br>
+<button onClick="drawpoint()">Draw!</button></br></br><button onClick="userreset()">Reset</button></br></br>
 <canvas id="point" width="400" height="400"
 style="border:3px solid #000000;">
 <img id="source" src="compass.png">
 </canvas>
-</br>
+</br></br>
+<button onClick="downloadcanvas()">Download</button>
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 </center>

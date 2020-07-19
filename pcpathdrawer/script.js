@@ -45,7 +45,7 @@ function drawpoint()
 function downloadcanvas()
 {
   var link = document.createElement('a');
-  link.download = 'filename.png';
+  link.download = 'compasspath.png';
   link.href = document.getElementById('point').toDataURL()
   link.click();
 }
