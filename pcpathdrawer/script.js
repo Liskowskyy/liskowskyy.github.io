@@ -105,11 +105,13 @@ function drawpoint()
 			toy = usery;
 		}
 		
-		
+		if (document.getElementById("userline").checked == true)
+		{
 		ctx.beginPath();
 		ctx.moveTo(fromx, fromy);
 		ctx.lineTo(tox, toy);
 		ctx.stroke();
+		}
 		ctx.beginPath();
 		ctx.arc(userx,usery,userradius,0,2*Math.PI);
 		ctx.fillStyle = usercolor;
