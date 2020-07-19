@@ -169,6 +169,10 @@ function coordinates()
 	mousey = -(Math.round(mousey * 100) / 100).toFixed(2);
 	document.getElementById("xydisplay").innerHTML = "Coordinates: "+event.offsetX+", "+event.offsetY+"</br>"+"Compass X, Y: "+mousex+", "+mousey;
 }
+window.onclick
+{
+	document.getElementById("xyscreen").innerHTML = event.clientX+", "+event.clientY;
+}
 
 function clickplace()
 {
