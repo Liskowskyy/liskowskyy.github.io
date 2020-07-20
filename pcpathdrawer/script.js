@@ -4,7 +4,7 @@ fromx = 0;
 fromy = 0;
 lastposx = 0;
 lastposy = 0;
-scriptver = "2020.07.21_00-49-00";
+scriptver = "2020.07.21_00-51-00";
 
 $(document).ready(function() {
   $.ajaxSetup({ cache: false });
@@ -24,7 +24,7 @@ function latestdatacheck()
 	}
 	else
 	{
-		alert("You are using an outdated (cached) version of the page.\n"+"Latest version: "+newestverison+"\nUsed version: "+scriptver+"\nUse the force reload button to get the newest version.");
+		alert("You are using an outdated (cached) version of the page.\n"+"Latest version: "+newestverison+"\nUsed version: "+scriptver);
 	}
 	});
 }
