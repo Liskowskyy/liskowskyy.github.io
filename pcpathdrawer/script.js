@@ -4,7 +4,11 @@ fromx = 0;
 fromy = 0;
 lastposx = 0;
 lastposy = 0;
-scriptver = "2020.07.20_11-52-00";
+scriptver = "2020.07.20_13-03-00";
+
+$(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+});
 
 function latestdatacheck()
 {	
