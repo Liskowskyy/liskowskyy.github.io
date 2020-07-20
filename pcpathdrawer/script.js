@@ -4,6 +4,24 @@ fromx = 0;
 fromy = 0;
 lastposx = 0;
 lastposy = 0;
+scriptver = "2020.07.20_11-52-00";
+
+function vercheck()
+{
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() 
+	{
+	if (this.readyState == 4 && this.status == 200) 
+	{
+    latestdata = JSON.parse(this.responseText);
+	}
+	};
+	xmlhttp.open("GET", "latestdata.json", true);
+	xmlhttp.send();
+	
+	latestver = latestdata.latestver;
+	alert(latestver);
+}
 
 function reset()
 {
