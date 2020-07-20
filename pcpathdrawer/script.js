@@ -4,7 +4,7 @@ fromx = 0;
 fromy = 0;
 lastposx = 0;
 lastposy = 0;
-scriptver = "2020.07.21_00-33-00";
+scriptver = "2020.07.21_00-35-00";
 
 $(document).ready(function() {
   $.ajaxSetup({ cache: false });
@@ -31,7 +31,7 @@ function latestdatacheck()
 
 function forcereload()
 {
-	location.reload(true);
+	window.location.href = window.location.href
 }
 
 function reset()
