@@ -6,31 +6,10 @@ lastposx = 0;
 lastposy = 0;
 scriptver = "2020.07.20_11-52-00";
 
-
-	var getJSON = function(url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-      var status = xhr.status;
-      if (status === 200) {
-        callback(null, xhr.response);
-      } else {
-        callback(status, xhr.response);
-      }
-    };
-    xhr.send();
-	};
-
 function latestdatacheck()
 {	
-	getJSON('https://liskowskyy.github.io/pcpathdrawer/latestdata.json',
-	function(err, data) {
-  if (err !== null) {
-    alert('Something went wrong: ' + err);
-  } else {
-    alert('Latest: ' + data.latestver);
-  }
+	$.getJSON('https://liskowskyy.github.io/pcpathdrawer/latestdata.json', function(data) {
+    alert(data.latestver);
 });
 }
 
