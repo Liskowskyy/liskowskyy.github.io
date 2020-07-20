@@ -9,24 +9,23 @@
 <body onload="reset()">
 <center>
 <h1>Political Compass Path Drawer</h1>
-<div id="line1"><h2>Point Customization</h2></div><div id="line2"><a href="javascript:collapse()"><h2 id="tri">▲</h2></a></div></br>
+<div id="line1"><h2>Customization</h2></div><div id="line2"><a href="javascript:collapse()"><h2 id="tri">▲</h2></a></div></br>
 <div id="customize">
-<label>Color: </label><input type="color" id="usercolor" value="#FF0000"></br></br>
-<label>Radius: </label><input type="number" id="userradius" value="8" min="1" max="300"></br></br>
-<label>Draw lines: </label><input type="checkbox" id="userline" checked="true">
+<label>Point Color: </label><input type="color" id="usercolor" value="#FF0000"></br>
+<label>Point Radius: </label><input type="number" id="userradius" value="8" min="1" max="300"></br>
+<label>Draw lines: </label><input type="checkbox" id="userline" checked="true"></br>
+<label>Click to set coordinates: </label><input type="checkbox" id="userclick" checked="true"></br>
+<label>Click to draw: </label><input type="checkbox" id="userdraw" checked="true">
 </div>
 <h2>Point Drawing</h2>
 <label>X: </label><input type="number" id="userx" value="0" placeholder="1.0" step="0.01" min="-10" max="10">
 <label>Y: </label><input type="number" id="usery" value="0" placeholder="1.0" step="0.01" min="-10" max="10">
-<button onClick="drawpoint()">Draw!</button></br></br><button onClick="userreset()">Reset</button></br>
-<label>Click to set coordinates: </label><input type="checkbox" id="userclick" checked="true"></br>
-<label>Click to draw: </label><input type="checkbox" id="userdraw" checked="true"></br></br>
+<button style="background-color: green;" onClick="drawpoint()">Draw!</button></br>
+</br><button style="background-color: red;" onClick="userreset()">Reset</button><button onClick="downloadcanvas()">Download</button></br></br>
 <canvas onmousemove="coordinates()" onclick="clickplace()" id="point" width="400" height="400" style="border:3px solid #000000">
 <img id="source" src="compass.png">
 </canvas>
 <h2 id="xydisplay"></h2>
-<h2 id="xyscreen"></h2>
-<button onClick="downloadcanvas()">Download</button>
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 </center>

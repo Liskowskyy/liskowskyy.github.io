@@ -5,3 +5,16 @@ h3 {font-size: 18px; font-weight: normal;}
 a { color: inherit; text-decoration:none;} 
 #line1 {display:inline-block;margin-right:10px;}
 #line2 {display:inline-block;}
+button {
+  background-color: #1F92FF;
+  border: none;
+  color: white;
+  margin-right:10px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Roboto Condensed'; 
+}
+#customize {padding-bottom: 5px;}
