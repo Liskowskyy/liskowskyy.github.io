@@ -4,7 +4,7 @@ fromx = 0;
 fromy = 0;
 lastposx = 0;
 lastposy = 0;
-scriptver = "2020.07.21_00-41-00";
+scriptver = "2020.07.21_00-49-00";
 
 $(document).ready(function() {
   $.ajaxSetup({ cache: false });
@@ -193,7 +193,7 @@ function downloadcanvas()
 	}
 	else if(userwatermark == true)
 	{
-		ctx.drawImage(watermark, 0, 0);
+		ctx.drawImage(watermark, 0, 0, canvassize, canvassize);
 		watermarked = 1;
 	}
 	var link = document.createElement('a');
