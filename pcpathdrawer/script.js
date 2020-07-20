@@ -9,7 +9,7 @@ scriptver = "2020.07.20_11-52-00";
 function latestdatacheck()
 {	
 	$.getJSON('https://liskowskyy.github.io/pcpathdrawer/latestdata.json', function(data) {
-    alert(data.latestver);
+    alert("Test success");
 });
 }
 
