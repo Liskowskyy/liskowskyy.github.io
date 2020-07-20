@@ -10,6 +10,7 @@ function reset()
 	ctx.clearRect(0, 0, 400, 400);
 	ctx.drawImage(source, 0, 0);
 	autonumber = 1;
+	watermarked = 0;
 }
 
 function userreset()
@@ -137,13 +138,22 @@ function drawpoint()
 
 function downloadcanvas()
 {
-  var link = document.createElement('a');
-  var date = new Date();
-  filename = "compasspath_"+Date.now();
-  name = prompt("Enter the desired filename:", filename)
-  link.download = name;
-  link.href = document.getElementById('point').toDataURL()
-  link.click();
+	userwatermark = document.getElementById("userwatermark").checked;
+	if(watermarked == 1)
+	{
+	}
+	else if(userwatermark == true)
+	{
+		ctx.drawImage(watermark, 0, 0);
+		watermarked = 1;
+	}
+	var link = document.createElement('a');
+	var date = new Date();
+	filename = "compasspath_"+Date.now();
+	name = prompt("Enter the desired filename:", filename)
+	link.download = name;
+	link.href = document.getElementById('point').toDataURL()
+	link.click();
 }
 
 function collapse()

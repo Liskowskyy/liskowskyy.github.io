@@ -15,7 +15,8 @@
 <label>Point Radius: </label><input type="number" id="userradius" value="8" min="1" max="300"></br>
 <label>Draw lines: </label><input type="checkbox" id="userline" checked="true"></br>
 <label>Click to set coordinates: </label><input type="checkbox" id="userclick" checked="true"></br>
-<label>Click to draw: </label><input type="checkbox" id="userdraw" checked="true">
+<label>Click to draw: </label><input type="checkbox" id="userdraw" checked="true"></br>
+<label>Watermark: </label><input type="checkbox" id="userwatermark" checked="true">
 </div>
 <h2>Point Drawing</h2>
 <label>X: </label><input type="number" id="userx" value="0" placeholder="1.0" step="0.01" min="-10" max="10">
@@ -24,6 +25,7 @@
 </br><button style="background-color: red;" onClick="userreset()">Reset</button><button onClick="downloadcanvas()">Download</button></br></br>
 <canvas onmousemove="coordinates()" onclick="clickplace()" id="point" width="400" height="400" style="border:3px solid #000000">
 <img id="source" src="compass.png">
+<img id="watermark" src="watermark.png">
 </canvas>
 <h2 id="xydisplay"></h2>
 <link rel="stylesheet" href="style.css">
