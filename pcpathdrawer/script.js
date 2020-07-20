@@ -10,7 +10,16 @@ function latestdatacheck()
 {	
 	$.getJSON('https://liskowskyy.github.io/pcpathdrawer/latestdata.json', function(data) {
     alert("Test success");
-});
+})
+	.done(function() {
+    console.log( "second success" );
+  })
+	.fail(function() {
+    console.log( "error" );
+  })
+	.always(function() {
+    console.log( "complete" );
+  });
 }
 
 function reset()
