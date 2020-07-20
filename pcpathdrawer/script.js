@@ -4,7 +4,7 @@ fromx = 0;
 fromy = 0;
 lastposx = 0;
 lastposy = 0;
-scriptver = "2020.07.20_13-15-00";
+scriptver = "2020.07.21_00-14-00";
 
 $(document).ready(function() {
   $.ajaxSetup({ cache: false });
@@ -31,8 +31,26 @@ function latestdatacheck()
 
 function reset()
 {
-	ctx.clearRect(0, 0, 400, 400);
-	ctx.drawImage(source, 0, 0);
+	if(document.getElementById("quality").value == "low")
+	{
+		canvassize = 400;
+	}
+	else if(document.getElementById("quality").value == "medium")
+	{
+		canvassize = 800;
+	}	
+	else if(document.getElementById("quality").value == "high")
+	{
+		canvassize = 1200;
+	}	
+	else if(document.getElementById("quality").value == "ultra")
+	{
+		canvassize = 2000;
+	}
+	document.getElementById("point").width = canvassize;
+	document.getElementById("point").height = canvassize;
+	ctx.clearRect(0, 0, canvassize, canvassize);
+	ctx.drawImage(source, 0, 0, canvassize, canvassize);
 	autonumber = 1;
 	watermarked = 0;
 }
@@ -54,10 +72,10 @@ function drawpoint()
 	userradius = document.getElementById("userradius").value;
 	userradius = userradius*1;
 	userx = document.getElementById("userx").value;
-	userx = (userx*5+50)*4;
+	userx = (userx*5+50)*(canvassize/100);
 	usery = document.getElementById("usery").value;
-	usery = (-usery*5+50)*4;
-	if(userx>400 || userx<0 || usery>400 || usery<0)
+	usery = (-usery*5+50)*(canvassize/100);
+	if(userx>canvassize || userx<0 || usery>canvassize || usery<0)
 	{
 		alert("Number must be within the range of -10 and 10");
 	}
@@ -197,8 +215,8 @@ function collapse()
 
 function coordinates()
 {
-	mousex = (event.offsetX/4-50)/5
-	mousey = (event.offsetY/4-50)/5
+	mousex = (event.offsetX/(canvassize/100)-50)/5
+	mousey = (event.offsetY/(canvassize/100)-50)/5
 	if (mousex < -10) mousex = -10;
 	if (mousey < -10) mousey = -10;
 	if (mousex > 10) mousex = 10;

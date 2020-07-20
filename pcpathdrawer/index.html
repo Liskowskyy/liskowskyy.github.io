@@ -17,7 +17,13 @@
 <label>Draw lines: </label><input type="checkbox" id="userline" checked="true"></br>
 <label>Click to set coordinates: </label><input type="checkbox" id="userclick" checked="true"></br>
 <label>Click to draw: </label><input type="checkbox" id="userdraw" checked="true"></br>
-<label>Watermark: </label><input type="checkbox" id="userwatermark" checked="true">
+<label>Watermark: </label><input type="checkbox" id="userwatermark" checked="true"></br>
+<label>Quality: </label><select name="quality" id="quality">
+  <option value="low">Low (400x400)</option>
+  <option value="medium">Medium (800x800)</option>
+  <option value="high">High (1200x1200)</option>
+  <option value="ultra">Ultra (2000x2000)</option>
+</select><label>(Reset the image to apply)</label>
 </div>
 <h2>Point Drawing</h2>
 <label>X: </label><input type="number" id="userx" value="0" placeholder="1.0" step="0.01" min="-10" max="10">
