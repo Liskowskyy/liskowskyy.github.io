@@ -4,7 +4,7 @@ fromx = 0;
 fromy = 0;
 lastposx = 0;
 lastposy = 0;
-scriptver = "2020.07.21_00-14-00";
+scriptver = "2020.07.21_00-25-00";
 
 $(document).ready(function() {
   $.ajaxSetup({ cache: false });
@@ -159,6 +159,8 @@ function drawpoint()
 		ctx.beginPath();
 		ctx.moveTo(fromx, fromy);
 		ctx.lineTo(tox, toy);
+		userlinewidth = document.getElementById("userlinewidth").value;
+		ctx.lineWidth = userlinewidth;
 		ctx.stroke();
 		}
 		ctx.beginPath();
