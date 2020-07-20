@@ -19,8 +19,8 @@ function latestdatacheck()
 	if(newestverison == scriptver)
 	{
 		console.log("Using newest version");
-		console.log("HTML/CSS/JS: "+scriptver);
-		console.log("JSON: "+newestverison);
+		console.log(newestverison);
+		console.log(scriptver);
 	}
 	else
 	{
