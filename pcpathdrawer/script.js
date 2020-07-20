@@ -4,7 +4,7 @@ fromx = 0;
 fromy = 0;
 lastposx = 0;
 lastposy = 0;
-scriptver = "2020.07.20_13-03-00";
+scriptver = "2020.07.20_13-09-00";
 
 $(document).ready(function() {
   $.ajaxSetup({ cache: false });
@@ -12,7 +12,8 @@ $(document).ready(function() {
 
 function latestdatacheck()
 {	
-	$.getJSON('latestdata.json', function(data) 
+	rand = new Date().getTime();
+	$.getJSON('latestdata.json?'+rand, function(data) 
 	{
     newestverison = data.latestver;
 	if(newestverison == scriptver)
