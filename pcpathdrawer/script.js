@@ -9,17 +9,17 @@ scriptver = "2020.07.20_11-52-00";
 function latestdatacheck()
 {	
 	$.getJSON('latestdata.json', function(data) {
-    alert("Test success");
-})
-	.done(function() {
-    console.log( "second success" );
-  })
-	.fail(function() {
-    console.log( "error" );
-  })
-	.always(function() {
-    console.log( "complete" );
-  });
+    newestverison = data.latestver;
+	if(newestverison == scriptver)
+	{
+		console.log("Using newest version");
+		console.log(newestverison);
+		console.log(scriptver);
+	}
+	else
+	{
+		alert("You are using an outdated (cached) version of the page.\n"+"Latest version: "+newestverison+"\nUsed version: "+scriptver;
+	}
 }
 
 function reset()
