@@ -6,20 +6,25 @@ lastposx = 0;
 lastposy = 0;
 scriptver = "2020.07.20_11-52-00";
 
-function vercheck()
+function getlatestdata()
 {
 	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function() 
-	{
-	if (this.readyState == 4 && this.status == 200) 
-	{
-    latestdata = JSON.parse(this.responseText);
-	}
+	var url = "https://liskowskyy.github.io/pcpathdrawer/latestdata.json";
+
+	xmlhttp.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+    var datajson = JSON.parse(this.responseText);
+    latestdatacheck(datajson);
+    }
 	};
-	xmlhttp.open("GET", "latestdata.json", true);
+
+	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
-	
-	latestversion = latestdata.latestver;
+}
+
+function latestdatacheck(datajson)
+{	
+	latestversion = datajson.latestver;
 	alert(latestversion);
 }
 
