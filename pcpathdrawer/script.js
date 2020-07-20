@@ -19,9 +19,9 @@ function latestdatacheck()
 	}
 	else
 	{
-		alert("You are using an outdated (cached) version of the page.\n"+"Latest version: "+newestverison+"\nUsed version: "+scriptver;
+		alert("You are using an outdated (cached) version of the page.\n"+"Latest version: "+newestverison+"\nUsed version: "+scriptver);
 	}
-	};
+	});
 }
 
 function reset()
