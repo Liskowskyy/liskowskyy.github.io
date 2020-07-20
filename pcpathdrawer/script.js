@@ -8,7 +8,7 @@ scriptver = "2020.07.20_11-52-00";
 
 function latestdatacheck()
 {	
-	$.getJSON('https://liskowskyy.github.io/pcpathdrawer/latestdata.json', function(data) {
+	$.getJSON('latestdata.json', function(data) {
     alert("Test success");
 })
 	.done(function() {
