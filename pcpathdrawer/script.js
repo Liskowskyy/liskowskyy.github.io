@@ -151,7 +151,7 @@ function downloadcanvas()
 	var date = new Date();
 	filename = "compasspath_"+Date.now();
 	name = prompt("Enter the desired filename:", filename);
-	if(name !== null) {filename = name}
+	if(name != null) {filename = name;}
 	link.download = filename;
 	link.href = document.getElementById('point').toDataURL()
 	link.click();
