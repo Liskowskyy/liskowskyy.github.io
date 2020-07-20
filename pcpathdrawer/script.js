@@ -6,26 +6,32 @@ lastposx = 0;
 lastposy = 0;
 scriptver = "2020.07.20_11-52-00";
 
-function getlatestdata()
-{
-	var xmlhttp = new XMLHttpRequest();
-	var url = "https://liskowskyy.github.io/pcpathdrawer/latestdata.json";
 
-	xmlhttp.onreadystatechange = function() {
-	if (this.readyState == 4 && this.status == 200) {
-    var datajson = JSON.parse(this.responseText);
-    latestdatacheck(datajson);
-    }
+	var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status === 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status, xhr.response);
+      }
+    };
+    xhr.send();
 	};
 
-	xmlhttp.open("GET", url, true);
-	xmlhttp.send();
-}
-
-function latestdatacheck(datajson)
+function latestdatacheck()
 {	
-	latestversion = datajson.latestver;
-	alert(latestversion);
+	getJSON('https://liskowskyy.github.io/pcpathdrawer/latestdata.json',
+	function(err, data) {
+  if (err !== null) {
+    alert('Something went wrong: ' + err);
+  } else {
+    alert('Your query count: ' + data.query.count);
+  }
+});
 }
 
 function reset()
