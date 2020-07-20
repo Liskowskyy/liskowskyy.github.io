@@ -19,8 +19,8 @@ function vercheck()
 	xmlhttp.open("GET", "latestdata.json", true);
 	xmlhttp.send();
 	
-	latestver = latestdata.latestver;
-	alert(latestver);
+	latestversion = latestdata.latestver;
+	alert(latestversion);
 }
 
 function reset()
