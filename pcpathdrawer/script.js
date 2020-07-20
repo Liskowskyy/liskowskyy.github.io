@@ -8,7 +8,8 @@ scriptver = "2020.07.20_11-52-00";
 
 function latestdatacheck()
 {	
-	$.getJSON('latestdata.json', function(data) {
+	$.getJSON('latestdata.json', function(data) 
+	{
     newestverison = data.latestver;
 	if(newestverison == scriptver)
 	{
@@ -20,6 +21,7 @@ function latestdatacheck()
 	{
 		alert("You are using an outdated (cached) version of the page.\n"+"Latest version: "+newestverison+"\nUsed version: "+scriptver;
 	}
+	};
 }
 
 function reset()
