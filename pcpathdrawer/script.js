@@ -180,7 +180,7 @@ function coordinates()
 	if (mousex > 10) mousex = 10;
 	if (mousey > 10) mousey = 10;
 	mousex = (Math.round(mousex * 100) / 100).toFixed(2);
-	mousey = -(Math.round(mousey * 100) / 100).toFixed(2);
+	mousey = (Math.round(-mousey * 100) / 100).toFixed(2);
 	document.getElementById("xydisplay").innerHTML = "Coordinates: "+event.offsetX+", "+event.offsetY+"</br>"+"Compass X, Y: "+mousex+", "+mousey;
 }
 
