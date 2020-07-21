@@ -18,3 +18,4 @@ button {
   font-family: 'Roboto Condensed'; 
 }
 #customize {padding-bottom: 5px;}
+#hidden {display: none;}
