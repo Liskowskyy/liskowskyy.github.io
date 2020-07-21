@@ -5,12 +5,13 @@ fromy = 0;
 lastposx = 0;
 lastposy = 0;
 scriptver = "2020.07.21_00-51-00";
+canvassize = 800;
 
 $(document).ready(function() {
   $.ajaxSetup({ cache: false });
 });
 
-function latestdatacheck()
+window.onload = function latestdatacheck()
 {	
 	rand = new Date().getTime();
 	$.getJSON('latestdata.json?'+rand, function(data) 
