@@ -1,0 +1,35 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<meta name="viewport" content="width=400, initial-scale=0.85, initial-scale=0.85, maximum-scale=0.85, minimum-scale=0.85">
+<link rel="icon" 
+      type="image/png" 
+      href="favicon.ico">
+<title>Video Data Usage Calculator</title>
+</head>
+<body>
+<center>
+<h1>Video Data Usage Calculator</h1>
+<h3>A simple tool to calculate/estimate data used by video streaming.</h3>
+<h3>This site includes several YouTube quality templates, but you can also type data in manually by selecting "Custom" from the "Template Group" selection.</h3>
+<label>Template Group: </label><select id="templategroup" value="a">
+	<option value="a">---Select one--</option>
+	<option value="yt">YouTube</option>
+	<option value="ytlive">YouTube Live</option>
+	<option value="custom">Custom</option>
+</select>
+<label>Template: </label><select id="templateyt">
+	<option value="1080p">1080p60</option>
+	<option value="1080p">1080p</option>
+	<option value="1080p">720p60</option>
+	<option value="1080p">700p</option>
+	<option value="1080p">480p60</option>
+	<option value="1080p">480p</option>
+	<option value="1080p">360p60</option>
+	<option value="1080p">360p</option>
+	<option value="1080p">240p</option>
+</select>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</body>
+</html>
