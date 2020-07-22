@@ -1,3 +1,5 @@
+includeminimum=false;
+
 function getjson()
 {
 	$.getJSON('templates.json?ver=XD', function(data) 
