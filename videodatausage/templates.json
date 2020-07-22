@@ -1,0 +1,19 @@
+{
+"yt": 
+[
+	"2160p60":
+	[
+    {
+	  "bitratemin": 53000,
+	  "bitratemax": 68000
+    }
+	],
+	"2160p":
+	[
+	{
+	  "bitratemin": 35000,
+	  "bitratemax": 45000
+    }
+	]
+  ]
+}
