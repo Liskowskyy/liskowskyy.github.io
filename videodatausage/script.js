@@ -46,7 +46,7 @@ function calcresult()
 {
 	MBperminutemax = bitratemax/8000;
 	MBperhourmax = MBperminutemax*60;
-	if(bitratemin==bitratemax)
+	if(bitratemin!==bitratemax)
 	{
 	MBperminutemin = bitratemin/8000;
 	MBperhourmin = MBperminutemin*60;
