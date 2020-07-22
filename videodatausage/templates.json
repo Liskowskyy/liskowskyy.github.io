@@ -1,15 +1,60 @@
 {
 "yt": 
 {
-	"a":
+	"uhd_h":
 	{
 	  "bitratemin": 53000,
 	  "bitratemax": 68000
     },
-	"4k":
+	"uhd":
 	{
 	  "bitratemin": 35000,
 	  "bitratemax": 45000
-	}
+	},
+	"qhd_h":
+	{
+	  "bitratemin": 24000,
+	  "bitratemax": 24000
+	},
+	"qhd":
+	{
+	  "bitratemin": 16000,
+	  "bitratemax": 16000
+	},
+	"fhd_h":
+	{
+	  "bitratemin": 12000,
+	  "bitratemax": 12000
+	},
+	"fhd":
+	{
+	  "bitratemin": 8000,
+	  "bitratemax": 8000
+	},
+	"hd_h":
+	{
+	  "bitratemin": 7500,
+	  "bitratemax": 7500
+	},
+	"hd":
+	{
+	  "bitratemin": 5000,
+	  "bitratemax": 5000
+	},
+	"sd_h":
+	{
+	  "bitratemin": 4000,
+	  "bitratemax": 4000
+	},
+	"sd":
+	{
+	  "bitratemin": 2500,
+	  "bitratemax": 2500
+	},
+	"ld":
+	{
+	  "bitratemin": 1500,
+	  "bitratemax": 1000
+	},
  }
 }
