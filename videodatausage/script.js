@@ -7,7 +7,7 @@ function getjson()
 	datagroup2 = datagroup[template]
 	bitratemin = datagroup2.bitratemin;
 	bitratemax = datagroup2.bitratemax;
-	alert(bitratemin+" "+bitratemax);
+	calcresult();
 	});
 }
 
@@ -31,9 +31,32 @@ $( "#usertemplategroup" ).change(function()
 $( "#templateyt" ).change(function() 
 {
 	template = document.getElementById("templateyt").value;
+	getjson();
 });
 
 $( "#templateytlive" ).change(function() 
 {
 	template = document.getElementById("templateytlive").value;
+	getjson();
 });
+
+function calcresult()
+{
+	MBperminutemax = bitratemax/8000;
+	MBperhourmax = MBperminutemax*60;
+	if(bitratemin==bitratemax)
+	{
+	MBperminutemin = bitratemin/8000;
+	MBperhourmin = MBperminutemin*60;
+	includeminimum = true;
+	}
+	
+	if(includeminimum==true)
+	{
+		alert("Minimum of data used per minute: "+MBperminutemin+"MB"+"\nMaximum of data used per hour: "+MBperminutemax+"MB"+"Minimum of data used per hour: "+MBperhourmin+"MB"+"\nMaximum of data used per hour: "+MBperhourmax+"MB");
+	}
+	else
+	{
+		alert("Maximum of data used per hour: "+MBperminutemax+"\nMaximum of data used per hour: "+MBperhourmax+"MB");
+	}
+}
