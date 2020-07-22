@@ -51,10 +51,15 @@
 	  "bitratemin": 2500,
 	  "bitratemax": 2500
 	},
-	"ld":
+	"ld_h":
 	{
 	  "bitratemin": 1500,
 	  "bitratemax": 1500
+	},
+	"ld":
+	{
+	  "bitratemin": 1000,
+	  "bitratemax": 1000
 	}
  }
 }
