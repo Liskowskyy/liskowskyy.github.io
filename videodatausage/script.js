@@ -23,6 +23,5 @@ $( "#usertemplategroup" ).change(function()
 	}
 	if(templategroup == "custom")
 	{
-		template
 	}
 });
