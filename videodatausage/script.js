@@ -31,9 +31,9 @@ $( "#usertemplategroup" ).change(function()
 $( "#templateyt" ).change(function() 
 {
 	template = document.getElementById("templateyt").value;
-}
+});
 
 $( "#templateytlive" ).change(function() 
 {
 	template = document.getElementById("templateytlive").value;
-}
+});
