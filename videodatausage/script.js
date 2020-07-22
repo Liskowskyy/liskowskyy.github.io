@@ -55,10 +55,10 @@ function calcresult()
 	
 	if(includeminimum==true)
 	{
-		alert("Minimum of data used per minute: "+MBperminutemin+"MB"+"\nMaximum of data used per hour: "+MBperminutemax+"MB"+"Minimum of data used per hour: "+MBperhourmin+"MB"+"\nMaximum of data used per hour: "+MBperhourmax+"MB");
+		alert("Minimum data used per minute: "+MBperminutemin+"MB"+"\nMaximum data used per hour: "+MBperminutemax+"MB"+"\nMinimum data used per hour: "+MBperhourmin+"MB"+"\nMaximum data used per hour: "+MBperhourmax+"MB");
 	}
 	else
 	{
-		alert("Maximum of data used per hour: "+MBperminutemax+"\nMaximum of data used per hour: "+MBperhourmax+"MB");
+		alert("Maximum data used per hour: "+MBperminutemax+"MB"+"\nMaximum data used per hour: "+MBperhourmax+"MB");
 	}
 }
