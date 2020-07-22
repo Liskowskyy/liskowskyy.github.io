@@ -55,7 +55,7 @@ function calcresult()
 	
 	if(includeminimum==true)
 	{
-		alert("Data used per minute: "MBperminutemin+"MB-"+MBperminutemax+"MB"+"\nData used per hour: "+MBperhourmin+"MB-"+MBperhourmax+"MB");
+		alert("Data used per minute: "+MBperminutemin+"MB-"+MBperminutemax+"MB"+"\nData used per hour: "+MBperhourmin+"MB-"+MBperhourmax+"MB");
 	}
 	else
 	{
