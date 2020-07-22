@@ -2,10 +2,7 @@ function getjson()
 {
 	$.getJSON('templates.json', function(data) 
 	{
-	group = document.getElementById("usertemplategroup").value;
-	template = document.getElementById("templateyt").value;
-    bitratemin = data.group.template.bitratemin;
-	bitratemax = data.group.template.bitratemax;
+		alert(data);
 	});
 }
 
