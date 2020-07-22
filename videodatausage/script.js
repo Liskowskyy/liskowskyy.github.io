@@ -1,6 +1,6 @@
 function getjson()
 {
-	$.getJSON('templates.json', function(data) 
+	$.getJSON('templates.json?ver=XD', function(data) 
 	{
 	group = document.getElementById("usertemplategroup").value;
 	template = document.getElementById("templateyt").value;
