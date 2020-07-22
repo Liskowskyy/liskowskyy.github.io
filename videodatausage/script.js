@@ -6,7 +6,7 @@ function getjson()
 	template = "2160p60";
     bitratemin = data.group.template.bitratemin;
 	bitratemax = data.group.template.bitratemax;
-	}
+	});
 
 $( "#usertemplategroup" ).change(function() 
 {
