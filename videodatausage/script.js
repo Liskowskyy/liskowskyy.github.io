@@ -4,9 +4,11 @@ function getjson()
 	{
 	group = document.getElementById("usertemplategroup").value;
 	template = document.getElementById("templateyt").value;
-    bitratemin = data[group];
-	bitratemax = data[group];
-	alert(bitratemin);
+	datagroup = bitratemin = data[group];
+	datagroup2 = datagroup[template]
+	bitratemin = datagroup2.bitratemin;
+	bitratemax = datagroup2.bitratemax;
+	alert(bitratemin+" "+bitratemax);
 	});
 }
 
