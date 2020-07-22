@@ -7,6 +7,7 @@ function getjson()
     bitratemin = data.group.template.bitratemin;
 	bitratemax = data.group.template.bitratemax;
 	});
+}
 
 $( "#usertemplategroup" ).change(function() 
 {
