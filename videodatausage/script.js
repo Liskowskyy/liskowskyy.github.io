@@ -3,7 +3,6 @@ function getjson()
 	$.getJSON('templates.json?ver=XD', function(data) 
 	{
 	group = document.getElementById("usertemplategroup").value;
-	template = document.getElementById("templateyt").value;
 	datagroup = bitratemin = data[group];
 	datagroup2 = datagroup[template]
 	bitratemin = datagroup2.bitratemin;
@@ -28,3 +27,13 @@ $( "#usertemplategroup" ).change(function()
 	{
 	}
 });
+
+$( "#templateyt" ).change(function() 
+{
+	template = document.getElementById("templateyt").value;
+}
+
+$( "#templateytlive" ).change(function() 
+{
+	template = document.getElementById("templateytlive").value;
+}

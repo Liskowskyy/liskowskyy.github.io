@@ -54,7 +54,7 @@
 	"ld":
 	{
 	  "bitratemin": 1500,
-	  "bitratemax": 1000
+	  "bitratemax": 1500
 	}
  }
 }
