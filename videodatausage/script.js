@@ -20,13 +20,16 @@ $( "#usertemplategroup" ).change(function()
 	if(templategroup == "yt")
 	{
 		$('div[id="div-templateyt"]').show();
+		getjson();
 	}
 	if(templategroup == "ytlive")
 	{
 		$('div[id="div-templateytlive"]').show();
+		getjson();
 	}
 	if(templategroup == "custom")
 	{
+		
 	}
 });
 
