@@ -5,7 +5,7 @@
 	{
 	  "bitratemin": 53000,
 	  "bitratemax": 68000
-    },
+	},
 	"uhd":
 	{
 	  "bitratemin": 35000,
@@ -55,6 +55,6 @@
 	{
 	  "bitratemin": 1500,
 	  "bitratemax": 1000
-	},
+	}
  }
 }
