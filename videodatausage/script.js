@@ -49,11 +49,11 @@ $( "#templateytlive" ).change(function()
 
 function calcresult()
 {
-	MBperminutemax = bitratemax/8000;
+	MBperminutemax = bitratemax/8000*60;
 	MBperhourmax = MBperminutemax*60;
 	if(bitratemin!==bitratemax)
 	{
-		MBperminutemin = bitratemin/8000;
+		MBperminutemin = bitratemin/8000*60;
 		MBperhourmin = MBperminutemin*60;
 		alert("Data used per minute: "+MBperminutemin+"MB-"+MBperminutemax+"MB"+"\nData used per hour: "+MBperhourmin+"MB-"+MBperhourmax+"MB");	
 	}
