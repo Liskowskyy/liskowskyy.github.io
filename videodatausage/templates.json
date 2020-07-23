@@ -61,5 +61,62 @@
 	  "bitratemin": 1000,
 	  "bitratemax": 1000
 	}
- }
+ },
+"ytlive":
+{
+	"uhd_h":
+	{
+	  "bitratemin": 20000,
+	  "bitratemax": 51000
+	},
+	"uhd":
+	{
+	  "bitratemin": 13000,
+	  "bitratemax": 34000
+	},
+	"qhd_h":
+	{
+	  "bitratemin": 9000,
+	  "bitratemax": 18000
+	},
+	"qhd":
+	{
+	  "bitratemin": 6000,
+	  "bitratemax": 13000
+	},
+	"fhd_h":
+	{
+	  "bitratemin": 4500,
+	  "bitratemax": 9000
+	},
+	"fhd":
+	{
+	  "bitratemin": 3000,
+	  "bitratemax": 6000
+	},
+	"hd_h":
+	{
+	  "bitratemin": 2250,
+	  "bitratemax": 6000
+	},
+	"hd":
+	{
+	  "bitratemin": 1500,
+	  "bitratemax": 4000
+	},
+	"sd":
+	{
+	  "bitratemin": 500,
+	  "bitratemax": 2000
+	},
+	"ld":
+	{
+	  "bitratemin": 400,
+	  "bitratemax": 1000
+	},
+	"uld":
+	{
+	  "bitratemin": 300,
+	  "bitratemax": 700
+	}
 }
