@@ -1,16 +1,21 @@
 includeminimum=false;
 
-function getjson()
+function dljson()
 {
 	$.getJSON('templates.json?ver=XD', function(data) 
 	{
+		datap = data;
+	});
+}
+
+function getjson()
+{
 	group = document.getElementById("usertemplategroup").value;
-	datagroup = bitratemin = data[group];
+	datagroup = datap[group];
 	datagroup2 = datagroup[template]
 	bitratemin = datagroup2.bitratemin;
 	bitratemax = datagroup2.bitratemax;
 	calcresult();
-	});
 }
 
 $( "#usertemplategroup" ).change(function() 
