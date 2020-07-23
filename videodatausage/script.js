@@ -55,11 +55,11 @@ function calcresult()
 	{
 		MBperminutemin = bitratemin/8000*60;
 		MBperhourmin = MBperminutemin*60;
-		document.getElementById("result").innerHTML = ("Data used per minute: "+MBperminutemin+"MB-"+MBperminutemax+"MB"+"</br>"+"Data used per hour: "+MBperhourmin+"MB-"+MBperhourmax+"MB");	
+		document.getElementById("result").innerHTML = ("Bitrate: "+bitratemin/8000+"-"bitratemax/8000+"Mbps"+"</br>"+"Data used per minute: "+MBperminutemin+"MB-"+MBperminutemax+"MB"+"</br>"+"Data used per hour: "+MBperhourmin+"MB-"+MBperhourmax+"MB");	
 	}
 	else
 	{
-		document.getElementById("result").innerHTML = ("Data used per minute: "+MBperminutemax+"MB"+"</br>"+"Data used per hour: "+MBperhourmax+"MB");
+		document.getElementById("result").innerHTML = ("Bitrate: "+bitratemax/8000+"Mbps"+"</br>"+"Data used per minute: "+MBperminutemax+"MB"+"</br>"+"Data used per hour: "+MBperhourmax+"MB");
 	}
 	document.getElementById("result").innerHTML = (document.getElementById("result").innerHTML +"</br></br>"+"Note that the upper limit given above can only be reached by videos with a lot of motion, i.e. a 12Mbit video consisting of static text will only be ~6MB in size, while an identical video with strong flashing lights added can reach that upper limit easily.");
 }
