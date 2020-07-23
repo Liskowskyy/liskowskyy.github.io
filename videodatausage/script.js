@@ -53,14 +53,9 @@ function calcresult()
 	MBperhourmax = MBperminutemax*60;
 	if(bitratemin!==bitratemax)
 	{
-	MBperminutemin = bitratemin/8000;
-	MBperhourmin = MBperminutemin*60;
-	includeminimum = true;
-	}
-	
-	if(includeminimum==true)
-	{
-		alert("Data used per minute: "+MBperminutemin+"MB-"+MBperminutemax+"MB"+"\nData used per hour: "+MBperhourmin+"MB-"+MBperhourmax+"MB");
+		MBperminutemin = bitratemin/8000;
+		MBperhourmin = MBperminutemin*60;
+		alert("Data used per minute: "+MBperminutemin+"MB-"+MBperminutemax+"MB"+"\nData used per hour: "+MBperhourmin+"MB-"+MBperhourmax+"MB");	
 	}
 	else
 	{
