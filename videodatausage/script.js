@@ -55,10 +55,10 @@ function calcresult()
 	{
 		MBperminutemin = bitratemin/8000*60;
 		MBperhourmin = MBperminutemin*60;
-		document.getElementById("result").innerHTML = ("Data used per minute: "+MBperminutemin+"MB-"+MBperminutemax+"MB"+"\nData used per hour: "+MBperhourmin+"MB-"+MBperhourmax+"MB");	
+		document.getElementById("result").innerHTML = ("Data used per minute: "+MBperminutemin+"MB-"+MBperminutemax+"MB"+"</br>"+"Data used per hour: "+MBperhourmin+"MB-"+MBperhourmax+"MB");	
 	}
 	else
 	{
-		document.getElementById("result").innerHTML = ("Data used per minute: "+MBperminutemax+"MB"+"\nData used per hour: "+MBperhourmax+"MB");
+		document.getElementById("result").innerHTML = ("Data used per minute: "+MBperminutemax+"MB"+"</br>"+"Data used per hour: "+MBperhourmax+"MB");
 	}
 }
