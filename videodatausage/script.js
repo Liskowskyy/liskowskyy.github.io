@@ -61,5 +61,5 @@ function calcresult()
 	{
 		document.getElementById("result").innerHTML = ("Bitrate: "+bitratemax/1000+"Mbps"+"</br>"+"Data used per minute: "+MBperminutemax+"MB"+"</br>"+"Data used per hour: "+MBperhourmax+"MB");
 	}
-	document.getElementById("result").innerHTML = (document.getElementById("result").innerHTML +"</br></br>"+"Note that the upper limit given above can only be reached by videos with a lot of motion, i.e. a 12Mbit video consisting of static text will only be ~6MB in size, while an identical video with strong flashing lights added can reach that upper limit easily.");
+	document.getElementById("result").innerHTML = (document.getElementById("result").innerHTML +"</br></br>"+"Note that the upper limit given above can only be reached by videos with a lot of motion, i.e. a 12Mbps video consisting of static text will only be ~6MB in size, while an identical video with strong flashing lights added can reach that upper limit easily.");
 }
