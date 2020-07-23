@@ -1,4 +1,5 @@
 includeminimum=false;
+datap = "";
 
 function dljson()
 {
