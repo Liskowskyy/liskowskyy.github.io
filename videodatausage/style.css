@@ -6,3 +6,4 @@ a { color: inherit; text-decoration:none;}
 #hidden {display: none;}
 #div-templateyt {display: none;}
 #div-templateytlive {display: none;}
+#main {background-color: white; max-width: 400px;}
