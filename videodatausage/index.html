@@ -13,6 +13,7 @@
 <h3>A simple tool to calculate/estimate data used by video streaming.</h3>
 <h3>This site includes several YouTube quality templates, but you can also type data in manually by selecting "Custom" from the "Template Group" selection.</h3>
 <div id="main">
+<input type="checkbox" id="noround" checked="false"><label>No rounding, ultra precision</label></br>
 <label>Template Group: </label><select id="usertemplategroup" value="a">
 	<option value="a">---Select one--</option>
 	<option value="yt">YouTube</option>
@@ -51,6 +52,9 @@
 	<option value="uld">240p</option>
 	<option disabled>No data available for other quality</option>
 </select>
+</div>
+<div id="div-templatecustom">
+<label>Bitrate: </label><input id="bitratecustom" type="number" value="8000"/><label> Kbps</label>
 </div>
 <h3 id="result"></h3>
 </div>

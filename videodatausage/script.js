@@ -1,5 +1,5 @@
-includeminimum=false;
 datap = "";
+rounding = true;
 
 function dljson()
 {
@@ -7,6 +7,13 @@ function dljson()
 	{
 		datap = data;
 	});
+}
+
+function getcustom()
+{
+	bitratemin = document.getElementById("bitratecustom").value;
+	bitratemax = document.getElementById("bitratecustom").value;
+	calcresult();
 }
 
 function getjson()
@@ -18,6 +25,12 @@ function getjson()
 	bitratemax = datagroup2.bitratemax;
 	calcresult();
 }
+
+$( "#noround" ).change(function()
+{
+	rounding = !document.getElementById("noround").checked;
+	calcresult();
+});
 
 $( "#usertemplategroup" ).change(function() 
 {
@@ -37,8 +50,14 @@ $( "#usertemplategroup" ).change(function()
 	}
 	if(templategroup == "custom")
 	{
-		
+		$('div[id="div-templatecustom"]').show();
+		getcustom();
 	}
+});
+
+$( "#bitratecustom" ).change(function() 
+{
+	getcustom();
 });
 
 $( "#templateyt" ).change(function() 
@@ -57,10 +76,20 @@ function calcresult()
 {
 	MBperminutemax = bitratemax/8000*60;
 	MBperhourmax = MBperminutemax*60;
+	if(rounding==true)
+	{
+		MBperminutemax = Math.round((MBperminutemax) * 100) / 100
+		MBperhourmax = Math.round((MBperhourmax) * 100) / 100
+	}
 	if(bitratemin!==bitratemax)
 	{
 		MBperminutemin = bitratemin/8000*60;
 		MBperhourmin = MBperminutemin*60;
+		if(rounding==true)
+		{
+			MBperminutemin = Math.round((MBperminutemin) * 100) / 100
+			MBperhourmin = Math.round((MBperhourmin) * 100) / 100
+		}
 		document.getElementById("result").innerHTML = ("Bitrate: "+bitratemin/1000+"-"+bitratemax/1000+"Mbps"+"</br>"+"Data used per minute: "+MBperminutemin+"MB-"+MBperminutemax+"MB"+"</br>"+"Data used per hour: "+MBperhourmin+"MB-"+MBperhourmax+"MB");	
 	}
 	else
