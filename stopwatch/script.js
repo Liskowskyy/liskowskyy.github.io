@@ -12,12 +12,12 @@ function timer()
 		ms=0;
 		sec++;
 	}
-	if(sec==61)
+	if(sec==60)
 	{
 		sec=0;
 		min++
 	}
-	if(min==61)
+	if(min==60)
 	{
 		min=0;
 		hr++;
