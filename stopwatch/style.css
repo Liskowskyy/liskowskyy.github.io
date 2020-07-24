@@ -5,7 +5,8 @@ h1 {font-size: 180px; font-weight: bold; text-align: center;}
     display: inline-block;
     text-align: center;
 	background-color: black; 
-	width: 900px; 
+	max-width: 900px; 
 	height: 220px; 
 	color:white; 
+    margin:auto;
 }
