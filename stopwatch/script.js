@@ -60,7 +60,6 @@ cstwobutton.disabled = true;
 
 function reset()
 {
-csonebutton.disabled = true;
 cstwobutton.disabled = true;
 resetbutton.disabled = true;
 ms = 0;
