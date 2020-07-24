@@ -8,5 +8,21 @@ h1 {font-size: 144px; font-weight: bold; text-align: center;}
 	color:white; 
 }
 
-#stop {display: none;}
-#reset {display: none;}
+button 
+{
+  background-color: #1F92FF;
+  border: none;
+  color: white;
+  margin-right:10px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Roboto Condensed'; 
+}
+
+button:disabled
+{
+	background-color: gray;	
+}
