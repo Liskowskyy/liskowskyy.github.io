@@ -1,14 +1,10 @@
 body {font-family: 'Roboto Condensed', sans-serif; background-color: #00b140;}
-h1 {font-size: 180px; font-weight: bold;}
+h1 {font-size: 180px; font-weight: bold; text-align: center;}
 #stopwatch 
 {
+   display: inline-block;
 	background-color: black; 
-	width: 871px; 
-	height: 217px; 
+	width: 900px; 
+	height: 220px; 
 	color:white; 
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
 }
