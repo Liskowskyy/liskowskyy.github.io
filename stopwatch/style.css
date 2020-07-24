@@ -1,12 +1,12 @@
 body {font-family: 'Roboto Condensed', sans-serif; background-color: #00b140;}
-h1 {font-size: 180px; font-weight: bold; text-align: center;}
+h1 {font-size: 144px; font-weight: bold; text-align: center;}
 #stopwatch 
 {
-    display: inline-block;
-    text-align: center;
 	background-color: black; 
-	max-width: 900px; 
-	height: 220px; 
+	width: 90%;
+	height: 174px; 
 	color:white; 
-    margin:auto;
 }
+
+#stop {display: none;}
+#reset {display: none;}

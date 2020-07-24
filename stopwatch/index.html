@@ -1,12 +1,17 @@
 <html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css"><script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <title>Stopwatch</title>
 </head>
 <body>
+<center>
 <div id="stopwatch">
 <h1 id="time">00:00:00,00</h1>
 </div>
+<input type="submit" onclick="start()" id="start" value="Start"/>
+<input type="submit" onclick="stopinterval()" id="stop" value="Stop"/>
+<input type="submit" onclick="reset()" id="reset" value="Reset"/>
+</center>
 <script src="script.js"></script>
 </body>
 </html>
