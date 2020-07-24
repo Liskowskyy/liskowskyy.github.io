@@ -77,15 +77,30 @@ function timer()
 		ms=0;
 		sec++;
 	}
+	if(ms>=61)
+	{
+		ms-60;
+		sec++
+	}
 	if(sec==60)
 	{
 		sec=0;
+		min++
+	}
+	if(sec>=61)
+	{
+		sec-60;
 		min++
 	}
 	if(min==60)
 	{
 		min=0;
 		hr++;
+	}
+	if(sec>=61)
+	{
+		min-60;
+		hr++
 	}
 set();
 }
