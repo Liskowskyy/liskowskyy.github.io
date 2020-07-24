@@ -3,6 +3,21 @@ sec=0;
 min=0;
 hr=0;
 
+function getparams()
+{
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+sync = urlParams.get('sync');
+if(sync==1)
+{
+hr = urlParams.get('hr');
+min = urlParams.get('min');
+sec = urlParams.get('sec');
+ms = urlParams.get('ms');
+start();
+}
+}
+
 function start()
 {
 timerinterval=setInterval(timer,10);
@@ -31,7 +46,7 @@ set();
 
 function timer()
 {
-	ms++;
+	ms++
 	if(ms==100)
 	{
 		ms=0;
@@ -58,4 +73,12 @@ function set()
 	min = ('0' + min).slice(-2);
 	
 	document.getElementById("time").innerHTML = (hr+":"+min+":"+sec+","+ms);
+}
+
+function copysyncone()
+{
+stopinterval();
+urlnoparam = location.protocol + '//' + location.host + location.pathname;
+tocopy = (urlnoparam+"?sync=1&hr="+hr+"&min="+min+"&sec="+sec+"&ms="+ms)
+navigator.clipboard.writeText(tocopy);
 }
