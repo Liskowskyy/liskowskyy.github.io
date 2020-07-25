@@ -26,14 +26,13 @@ if(sync==1)
 if(sync==2)
 {
 	utcnow = Date.now();
-	utcthen = urlParams.get('utc');
+	utcthen = Number(urlParams.get('utc'));
 	utcdiff = utcnow-utcthen;
 	
-	hr = Number(urlParams.get('hr')) + Math.floor(utcdiff / 3600000);
-	min = Number(urlParams.get('min')) + Math.floor(utcdiff / 60000);
-	sec = Number(urlParams.get('sec')) + Math.floor(utcdiff / 1000);
+	hr = Number(urlParams.get('hr'));
+	min = Number(urlParams.get('min'));
+	sec = Number(urlParams.get('sec'));
 	ms = Number(urlParams.get('ms')) + Math.floor(utcdiff / 10);
-	
 	
 	start();
 }
