@@ -97,7 +97,7 @@ function timer()
 		min=0;
 		hr++;
 	}
-	if(sec>=61)
+	if(min>=61)
 	{
 		min = min-60;
 		hr++
