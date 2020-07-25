@@ -17,10 +17,10 @@ urlParams = new URLSearchParams(queryString);
 sync = urlParams.get('sync');
 if(sync==1)
 {
-	hr = urlParams.get('hr');
-	min = urlParams.get('min');
-	sec = urlParams.get('sec');
-	ms = urlParams.get('ms');
+	hr = Number(urlParams.get('hr'));
+	min = Number(urlParams.get('min'));
+	sec = Number(urlParams.get('sec'));
+	ms = Number(urlParams.get('ms'));
 	start();
 }
 if(sync==2)
@@ -71,16 +71,17 @@ set();
 
 function timer()
 {
-	ms++
+	ms++;
 	if(ms==100)
 	{
-		ms=0;
 		sec++;
+		ms=0;
 	}
 	if(ms>=101)
 	{
-		ms = ms-100;
-		sec++
+		var x = Math.floor(ms/100);
+		ms = ms-(x*100)
+		sec = sec+x;
 	}
 	if(sec==60)
 	{
@@ -89,8 +90,9 @@ function timer()
 	}
 	if(sec>=61)
 	{
-		sec = sec-60;
-		min++
+		var x = Math.floor(sec/60);
+		sec = sec-(x*60)
+		min = min+x;
 	}
 	if(min==60)
 	{
@@ -99,8 +101,9 @@ function timer()
 	}
 	if(min>=61)
 	{
-		min = min-60;
-		hr++
+		var x = Math.floor(min/60);
+		min = min-(x*60)
+		hr = hr+x;	
 	}
 set();
 }
