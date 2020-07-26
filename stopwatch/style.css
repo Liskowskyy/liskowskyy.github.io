@@ -2,7 +2,6 @@ body {font-family: 'Roboto Condensed', sans-serif; background-color: #00b140;}
 #time {font-weight: bold; text-align: center; background-color: black;}
 #stopwatch 
 {
-	max-width: 705px;
 	font-size: 72px; 
 	color:white; 
 }
