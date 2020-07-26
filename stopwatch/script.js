@@ -40,12 +40,14 @@ if(sync==2)
 
 function start()
 {
+synconstart();
 timerinterval=setInterval(timer,10);
 startbutton.disabled = true;
 stopbutton.disabled = false;
 resetbutton.disabled = true;
 csonebutton.disabled = false;
 cstwobutton.disabled = false;
+
 }
 
 function stopinterval()
@@ -117,6 +119,14 @@ function set()
 	document.getElementById("time").innerHTML = (hr+":"+min+":"+sec+","+ms);
 }
 
+function synconstart()
+{
+	urlnoparam = location.protocol + '//' + location.host + location.pathname;
+	utc = Date.now();
+	tocopy = (urlnoparam+"?sync=2&hr="+hr+"&min="+min+"&sec="+sec+"&ms="+ms+"&utc="+utc);
+	window.history.pushState('stopwatch', 'Stopwatch', tocopy);
+}
+
 function copysyncone()
 {
 stopinterval();
@@ -133,6 +143,7 @@ urlnoparam = location.protocol + '//' + location.host + location.pathname;
 utc = Date.now();
 tocopy = (urlnoparam+"?sync=2&hr="+hr+"&min="+min+"&sec="+sec+"&ms="+ms+"&utc="+utc);
 navigator.clipboard.writeText(tocopy);
+synconstart();
 document.getElementById('cstwo').innerText = 'Copied!';
 setTimeout(function(){document.getElementById('cstwo').innerText = 'Copy Link (Synchronize)';}, 1500);
 }
