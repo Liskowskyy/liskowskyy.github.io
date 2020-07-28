@@ -25,7 +25,7 @@ if(sync==1)
 }
 if(sync==2)
 {
-	$.getJSON('http://worldtimeapi.org/api/timezone/etc/utc', function(data) 
+	$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
 	{
 		alert(data.unixtime);
 		utcnow = data.unixtime;
