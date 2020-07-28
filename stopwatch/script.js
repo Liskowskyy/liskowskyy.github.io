@@ -2,6 +2,7 @@ ms = 0;
 sec=0;
 min=0;
 hr=0;
+utcnow=0;
 
 const startbutton = document.getElementById('start');
 const stopbutton = document.getElementById('stop');
@@ -27,7 +28,6 @@ if(sync==2)
 {
 	$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
 	{
-		alert(data.unixtime);
 		utcnow = data.unixtime;
 	});
 	
