@@ -25,7 +25,11 @@ if(sync==1)
 }
 if(sync==2)
 {
-	utcnow = Date.now();
+	$.getJSON('http://worldtimeapi.org/api/timezone/etc/utc', function(data) 
+	{
+		utcnow = data.unixtime;
+	});
+	
 	utcthen = Number(urlParams.get('utc'));
 	utcdiff = utcnow-utcthen;
 	
