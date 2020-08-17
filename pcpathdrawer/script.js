@@ -4,7 +4,7 @@ fromx = 0;
 fromy = 0;
 lastposx = 0;
 lastposy = 0;
-scriptver = "2020.07.21_00-51-00";
+scriptver = "2020.08.18_01-36-00";
 canvassize = 800;
 
 $(document).ready(function() {
