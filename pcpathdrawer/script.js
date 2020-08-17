@@ -28,6 +28,7 @@ window.onload = function latestdatacheck()
 		alert("You are using an outdated (cached) version of the page.\n"+"Latest version: "+newestverison+"\nUsed version: "+scriptver);
 	}
 	});
+reset();
 }
 
 function forcereload()
