@@ -29,8 +29,8 @@ if(sync==2)
 	$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
 	{
 		utcnow = Number(data.unixtime);
-	});
-	
+		
+			
 	utcthen = Number(urlParams.get('utc'));
 	utcthen = utcthen/1000;
 	utcdiff = utcnow - utcthen;
@@ -41,6 +41,7 @@ if(sync==2)
 	ms = Number(urlParams.get('ms')) + Math.floor(utcdiff / 10);
 	
 	start();
+	});
 }
 }
 
