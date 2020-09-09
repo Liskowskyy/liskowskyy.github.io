@@ -38,7 +38,7 @@ if(sync==2)
 	hr = Number(urlParams.get('hr'));
 	min = Number(urlParams.get('min'));
 	sec = Number(urlParams.get('sec'))
-	ms = Number(urlParams.get('ms')) + Math.floor(utcdiff / 10);
+	ms = Number(urlParams.get('ms')) + (utcdiff * 1000);
 	
 	start();
 	});
