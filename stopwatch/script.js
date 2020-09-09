@@ -28,7 +28,7 @@ if(sync==2)
 {
 	$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
 	{
-		utcnow = data.unixtime;
+		utcnow = Number(data.unixtime);
 	});
 	
 	utcthen = Number(urlParams.get('utc'));
