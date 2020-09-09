@@ -32,6 +32,7 @@ if(sync==2)
 	});
 	
 	utcthen = Number(urlParams.get('utc'));
+	utcthen = utcthen/1000;
 	utcdiff = utcnow-utcthen;
 	
 	hr = Number(urlParams.get('hr'));
