@@ -29,17 +29,18 @@ if(sync==2)
 	$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
 	{
 		utcnow = Number(data.unixtime);
-		utcthen = Number(urlParams.get('utc'));
-		utcthen = utcthen/1000;
-		utcdiff = utcnow - utcthen;
+	});
 	
-		hr = Number(urlParams.get('hr'));
-		min = Number(urlParams.get('min'));
-		sec = Number(urlParams.get('sec')) + Number(utcdiff);
-		ms = Number(urlParams.get('ms'));
+	utcthen = Number(urlParams.get('utc'));
+	utcthen = utcthen/1000;
+	utcdiff = utcnow - utcthen;
+	
+	hr = Number(urlParams.get('hr'));
+	min = Number(urlParams.get('min'));
+	sec = Number(urlParams.get('sec'))
+	ms = Number(urlParams.get('ms')) + Math.floor(utcdiff / 10);
 	
 	start();
-	});
 }
 }
 
