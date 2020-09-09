@@ -26,24 +26,24 @@ if(sync==1)
 }
 if(sync==2)
 {
-	$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
-	{
-	utcnow = Number(data.unixtime);
-	msx = (data.datetime).substr(21, 1);
-	utcnow = ""+utcnow+msx;
-	utcnow = Number(utcnow);
+	//$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
+	//{
+	//utcnow = Number(data.unixtime);
+	//msx = (data.datetime).substr(21, 1);
+	//utcnow = ""+utcnow+msx;
+	//utcnow = Number(utcnow);
+	utcnow = Number(Date.now());
 	utcthen = Number(urlParams.get('utc'));
-	utcthen = utcthen;
 	utcdiff = utcnow - utcthen;
 	
 	
 	hr = Number(urlParams.get('hr'));
 	min = Number(urlParams.get('min'));
 	sec = Number(urlParams.get('sec'));
-	ms = Number(urlParams.get('ms')) + utcdiff;
+	ms = Number(urlParams.get('ms')) + Math.floor(utcdiff / 10);
 	
 	start();
-	});
+	//});
 }
 }
 
@@ -131,15 +131,16 @@ function set()
 function synconstart()
 {
 	urlnoparam = location.protocol + '//' + location.host + location.pathname;
-	$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
-	{
-	utc = Number(data.unixtime);
-	msx = (data.datetime).substr(21, 1);
-	utc = ""+utc+msx;
-	utc = Number(utc);
+	//$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
+	//{
+	//utc = Number(data.unixtime);
+	//msx = (data.datetime).substr(21, 1);
+	//utc = ""+utc+msx;
+	//utc = Number(utc);
+		utc = Date.now();
 	tocopy = (urlnoparam+"?sync=2&hr="+hr+"&min="+min+"&sec="+sec+"&ms="+ms+"&utc="+utc);
 	window.history.pushState('stopwatch', 'Stopwatch', tocopy);
-	});
+	//});
 }
 
 function copysyncone()
@@ -155,18 +156,19 @@ setTimeout(function(){document.getElementById('csone').innerText = 'Copy Link (R
 function copysynctwo()
 {
 urlnoparam = location.protocol + '//' + location.host + location.pathname;
-$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
-{
-utc = Number(data.unixtime);
-msx = (data.datetime).substr(21, 1);
-utc = ""+utc+msx;
-utc = Number(utc);
+//$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
+//{
+//utc = Number(data.unixtime);
+//msx = (data.datetime).substr(21, 1);
+//utc = ""+utc+msx;
+//utc = Number(utc);
+	utc = Date.now();
 tocopy = (urlnoparam+"?sync=2&hr="+hr+"&min="+min+"&sec="+sec+"&ms="+ms+"&utc="+utc);
 navigator.clipboard.writeText(tocopy);
 synconstart();
 document.getElementById('cstwo').innerText = 'Copied!';
 setTimeout(function(){document.getElementById('cstwo').innerText = 'Copy Link (Synchronize)';}, 1500);
-});
+//});
 }
 
 (function($) {
