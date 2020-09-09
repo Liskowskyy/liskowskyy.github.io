@@ -29,9 +29,8 @@ if(sync==2)
 	$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
 	{
 	utcnow = Number(data.unixtime);
-	ms = (data.datetime).substr(21, 22);
-	alert(ms);
-	utcnow = ""+utcnow+ms;
+	msx = (data.datetime).substr(21, 22);
+	utcnow = ""+utcnow+msx;
 	utcnow = Number(utcnow);
 	utcthen = Number(urlParams.get('utc'));
 	utcthen = utcthen;
@@ -135,8 +134,8 @@ function synconstart()
 	$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
 	{
 	utc = Number(data.unixtime);
-	ms = (data.datetime).substr(21, 22);
-	utc = ""+utc+ms;
+	msx = (data.datetime).substr(21, 22);
+	utc = ""+utc+msx;
 	utc = Number(utc);
 	tocopy = (urlnoparam+"?sync=2&hr="+hr+"&min="+min+"&sec="+sec+"&ms="+ms+"&utc="+utc);
 	window.history.pushState('stopwatch', 'Stopwatch', tocopy);
@@ -159,8 +158,8 @@ urlnoparam = location.protocol + '//' + location.host + location.pathname;
 $.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
 {
 utc = Number(data.unixtime);
-ms = (data.datetime).substr(21, 22);
-utc = ""+utc+ms;
+msx = (data.datetime).substr(21, 22);
+utc = ""+utc+msx;
 utc = Number(utc);
 tocopy = (urlnoparam+"?sync=2&hr="+hr+"&min="+min+"&sec="+sec+"&ms="+ms+"&utc="+utc);
 navigator.clipboard.writeText(tocopy);
