@@ -30,6 +30,7 @@ if(sync==2)
 	{
 	utcnow = Number(data.unixtime);
 	ms = (data.datetime).substr(21, 22);
+	alert(ms);
 	utcnow = ""+utcnow+ms;
 	utcnow = Number(utcnow);
 	utcthen = Number(urlParams.get('utc'));
