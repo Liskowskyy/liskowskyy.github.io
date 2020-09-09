@@ -28,9 +28,10 @@ if(sync==2)
 {
 	$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
 	{
-		utcnow = Number(data.unixtime);
-		
-			
+	utcnow = Number(data.unixtime);
+	ms = Number((data.datetime).substr(21, 22));
+	utcnow = ""+utcnow+ms;
+	utcnow = Number(utcnow);
 	utcthen = Number(urlParams.get('utc'));
 	utcthen = utcthen;
 	utcdiff = utcnow - utcthen;
@@ -38,8 +39,8 @@ if(sync==2)
 	
 	hr = Number(urlParams.get('hr'));
 	min = Number(urlParams.get('min'));
-	sec = Number(urlParams.get('sec')) + utcdiff;
-	ms = Number(urlParams.get('ms'));
+	sec = Number(urlParams.get('sec'));
+	ms = Number(urlParams.get('ms')) + utcdiff;
 	
 	start();
 	});
@@ -132,7 +133,10 @@ function synconstart()
 	urlnoparam = location.protocol + '//' + location.host + location.pathname;
 	$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
 	{
-		utc = Number(data.unixtime);
+	utc = Number(data.unixtime);
+	ms = Number((data.datetime).substr(21, 22));
+	utc = ""+utc+ms;
+	utc = Number(utc);
 	tocopy = (urlnoparam+"?sync=2&hr="+hr+"&min="+min+"&sec="+sec+"&ms="+ms+"&utc="+utc);
 	window.history.pushState('stopwatch', 'Stopwatch', tocopy);
 	});
@@ -151,12 +155,18 @@ setTimeout(function(){document.getElementById('csone').innerText = 'Copy Link (R
 function copysynctwo()
 {
 urlnoparam = location.protocol + '//' + location.host + location.pathname;
-utc = Date.now();
+$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
+{
+utc = Number(data.unixtime);
+ms = Number((data.datetime).substr(21, 22));
+utc = ""+utc+ms;
+utc = Number(utc);
 tocopy = (urlnoparam+"?sync=2&hr="+hr+"&min="+min+"&sec="+sec+"&ms="+ms+"&utc="+utc);
 navigator.clipboard.writeText(tocopy);
 synconstart();
 document.getElementById('cstwo').innerText = 'Copied!';
 setTimeout(function(){document.getElementById('cstwo').innerText = 'Copy Link (Synchronize)';}, 1500);
+});
 }
 
 (function($) {
