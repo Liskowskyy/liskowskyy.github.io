@@ -31,9 +31,11 @@ if(sync==2)
 		utcnow = Number(data.unixtime);
 		
 			
-	utcthen = Number(urlParams.get('utc'))*1000;
+	utcthen = Number(urlParams.get('utc'));
 	utcthen = utcthen;
 	utcdiff = utcnow - utcthen;
+	
+	alert(utcthen+""+utcnow+""+utcdiff);
 	
 	hr = Number(urlParams.get('hr'));
 	min = Number(urlParams.get('min'));
