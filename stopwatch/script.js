@@ -131,9 +131,12 @@ function set()
 function synconstart()
 {
 	urlnoparam = location.protocol + '//' + location.host + location.pathname;
-	utc = Date.now();
+	$.getJSON('https://worldtimeapi.org/api/timezone/etc/utc', function(data) 
+	{
+		utc = Number(data.unixtime);
 	tocopy = (urlnoparam+"?sync=2&hr="+hr+"&min="+min+"&sec="+sec+"&ms="+ms+"&utc="+utc);
 	window.history.pushState('stopwatch', 'Stopwatch', tocopy);
+	});
 }
 
 function copysyncone()
