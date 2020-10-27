@@ -58,8 +58,17 @@ function checkdone()
 {
 	if(fetch==3)
 	{
+		document.getElementById("resultext").innerHTML = "";
 		posts = gaynum+straightnum+lesbianum;
-		document.getElementById("resultext").innerHTML = "Male/male: "+gaynum+ "<br />" +"Male/female: "+straightnum+ "<br />" +"Female/female: "+lesbianum+ "<br />" +"Total: "+posts;
+		if(gaynum==75&&gaynum==75&&lesbianum==75)
+		{
+			document.getElementById("resultext").innerHTML = "Output like that (75/75/75) almost always means that the username is incorrect because then e621 shows all posts for whatever reason (limit is 75 posts per query)."  + "<br />";
+		}
+			if(gaynum==0&&gaynum==0&&lesbianum==0)
+		{
+			document.getElementById("resultext").innerHTML = "No posts found. It either means no activity or no username input." + "<br />";
+		}
+		document.getElementById("resultext").innerHTML = document.getElementById("resultext").innerHTML + "Male/male: "+gaynum+ "<br />" +"Male/female: "+straightnum+ "<br />" +"Female/female: "+lesbianum+ "<br />" +"Total: "+posts;
 		if(gender=="male") {malecalc();}
 		if(gender=="female") {femalecalc();}
 		if(gender=="enby") {enbycalc();}
