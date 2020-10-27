@@ -1,37 +1,46 @@
 function getgay()
 {
-	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'male/male'+auth, function(data) 
+	for (i = 0; i < 5; i++) {
+	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'male/male+male+-female+rating:e'+auth+"&limit=320&page="+i, function(data) 
 	{
-		gaynum = Object.keys(data.posts).length;
+		gaynum = gaynum+Object.keys(data.posts).length;
 		fetch++;
 		checkdone();
 	})
 	 .fail(function() {document.getElementById("resultext").innerHTML = "Request failed! Are your username and API key correct?";
 	 });
+	}
 }
 
 function getstraight()
 {
-	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'male/female'+auth, function(data) 
+	for (j = 0; j < 5; j++) {
+	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'male/female+rating:e'+auth+"&limit=320&page="+j, function(data) 
 	{
-		straightnum = Object.keys(data.posts).length;
+		straightnum = straightnum + Object.keys(data.posts).length;
 		fetch++;
 		checkdone();
 	});
+	}
 }
 
 function getlesbian()
 {
-	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'female/female'+auth, function(data) 
+	for (k = 0; k < 5; k++) {
+	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'female/female+female+-male+rating:e'+auth+"&limit=320&page="+k, function(data) 
 	{
-		lesbianum = Object.keys(data.posts).length;
+		lesbianum = lesbianum + Object.keys(data.posts).length;
 		fetch++;
 		checkdone();
 	});
+	}
 }
 
 function calc()
 {
+	gaynum = 0;
+	straightnum = 0;
+	lesbianum = 0;
 	username = document.getElementById("username").value;
 	apikey = document.getElementById("key").value;
 	method = document.getElementById("method").value;
@@ -56,7 +65,7 @@ function calc()
 
 function checkdone()
 {
-	if(fetch==3)
+	if(fetch==15)
 	{
 		document.getElementById("resultext").innerHTML = "";
 		posts = gaynum+straightnum+lesbianum;
