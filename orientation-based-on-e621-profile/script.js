@@ -1,7 +1,7 @@
 function getgay()
 {
 	for (i = 0; i < 2; i++) {
-	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'male/male+male+-female+rating:e'+auth+"&limit=320&page="+i+"_client=Orientation based on e621 profile (by Secretwolfox on e621)", function(data) 
+	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'male/male+male+-female+rating:e'+auth+"&limit=320&page="+i+"&_client=Orientation based on e621 profile (by Secretwolfox on e621)", function(data) 
 	{
 		gaynum = gaynum+Object.keys(data.posts).length;
 		fetch++;
@@ -15,7 +15,7 @@ function getgay()
 function getstraight()
 {
 	for (j = 0; j < 2; j++) {
-	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'male/female+rating:e'+auth+"&limit=320&page="+j+"_client=Orientation based on e621 profile (by Secretwolfox on e621)", function(data) 
+	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'male/female+rating:e'+auth+"&limit=320&page="+j+"&_client=Orientation based on e621 profile (by Secretwolfox on e621)", function(data) 
 	{
 		straightnum = straightnum + Object.keys(data.posts).length;
 		fetch++;
@@ -27,7 +27,7 @@ function getstraight()
 function getlesbian()
 {
 	for (k = 0; k < 2; k++) {
-	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'female/female+female+-male+rating:e'+auth+"&limit=320&page="+k+"_client=Orientation based on e621 profile (by Secretwolfox on e621)", function(data) 
+	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'female/female+female+-male+rating:e'+auth+"&limit=320&page="+k+"&_client=Orientation based on e621 profile (by Secretwolfox on e621)", function(data) 
 	{
 		lesbianum = lesbianum + Object.keys(data.posts).length;
 		fetch++;
@@ -38,6 +38,7 @@ function getlesbian()
 
 function calc()
 {
+	start = performance.now();
 	gaynum = 0;
 	straightnum = 0;
 	lesbianum = 0;
@@ -81,6 +82,8 @@ function checkdone()
 		if(gender=="male") {malecalc();}
 		if(gender=="female") {femalecalc();}
 		if(gender=="enby") {enbycalc();}
+		stop = performance.now();
+		console.log("Calculation took "+(stop-start)+"ms");
 	}
 	else
 	{
