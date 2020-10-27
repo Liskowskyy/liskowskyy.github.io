@@ -1,6 +1,6 @@
 function getgay()
 {
-	for (i = 0; i < 5; i++) {
+	for (i = 0; i < 2; i++) {
 	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'male/male+male+-female+rating:e'+auth+"&limit=320&page="+i, function(data) 
 	{
 		gaynum = gaynum+Object.keys(data.posts).length;
@@ -14,7 +14,7 @@ function getgay()
 
 function getstraight()
 {
-	for (j = 0; j < 5; j++) {
+	for (j = 0; j < 2; j++) {
 	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'male/female+rating:e'+auth+"&limit=320&page="+j, function(data) 
 	{
 		straightnum = straightnum + Object.keys(data.posts).length;
@@ -26,7 +26,7 @@ function getstraight()
 
 function getlesbian()
 {
-	for (k = 0; k < 5; k++) {
+	for (k = 0; k < 2; k++) {
 	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'female/female+female+-male+rating:e'+auth+"&limit=320&page="+k, function(data) 
 	{
 		lesbianum = lesbianum + Object.keys(data.posts).length;
@@ -65,7 +65,7 @@ function calc()
 
 function checkdone()
 {
-	if(fetch==15)
+	if(fetch==6)
 	{
 		document.getElementById("resultext").innerHTML = "";
 		posts = gaynum+straightnum+lesbianum;
