@@ -78,7 +78,7 @@ function checkdone()
 		{
 			document.getElementById("resultext").innerHTML = "No posts found. It either means no activity or no username input." + "<br />";
 		}
-		document.getElementById("resultext").innerHTML = document.getElementById("resultext").innerHTML + "Male/male: "+gaynum+ "<br />" +"Male/female: "+straightnum+ "<br />" +"Female/female: "+lesbianum+ "<br />" +"Total: "+posts;
+		document.getElementById("resultext").innerHTML = document.getElementById("resultext").innerHTML + "Male-oriented: "+gaynum+ "<br />" +"Male+female: "+straightnum+ "<br />" +"Female-oriented: "+lesbianum+ "<br />" +"Total: "+posts;
 		if(gender=="male") {malecalc();}
 		if(gender=="female") {femalecalc();}
 		if(gender=="enby") {enbycalc();}
