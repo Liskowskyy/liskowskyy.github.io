@@ -70,9 +70,9 @@ function checkdone()
 	{
 		document.getElementById("resultext").innerHTML = "";
 		posts = gaynum+straightnum+lesbianum;
-		if(gaynum==75&&gaynum==75&&lesbianum==75)
+		if(gaynum==640&&gaynum==640&&lesbianum==640)
 		{
-			document.getElementById("resultext").innerHTML = "Output like that (75/75/75) almost always means that the username is incorrect because then e621 shows all posts for whatever reason (limit is 75 posts per query)."  + "<br />";
+			document.getElementById("resultext").innerHTML = "Output like that (640/640/640) almost always means that the username is incorrect because then e621 shows all posts for whatever reason (limit is 75 posts per query)."  + "<br />";
 		}
 			if(gaynum==0&&gaynum==0&&lesbianum==0)
 		{
