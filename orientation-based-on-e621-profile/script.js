@@ -2,16 +2,12 @@ function getgay()
 {
 	$.getJSON('https://e621.net/posts.json?tags='+postype+username+'+'+'male/male'+auth, function(data) 
 	{
-		console.log('https://e621.net/posts.json?tags='+postype+username+'+'+'male/male'+auth);
 		gaynum = Object.keys(data.posts).length;
 		fetch++;
 		checkdone();
-		console.log(data);
-		if(data.success == "false")
-		{
-			alert("Auth failed!");
-		}
-	});
+	})
+	 .fail(function() {document.getElementById("resultext").innerHTML = "Request failed! Are your username and API key correct?";
+	 });
 }
 
 function getstraight()
