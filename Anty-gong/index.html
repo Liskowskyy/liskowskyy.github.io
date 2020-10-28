@@ -1,0 +1,56 @@
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<meta name="viewport" content="width=400, initial-scale=0.85, initial-scale=0.85, maximum-scale=0.85, minimum-scale=0.85">
+<link rel="icon" 
+      type="image/png" 
+      href="favicon.ico">
+<title>Anty-gong</title>
+</head>
+<body onload="before()">
+<center>
+<h1>Anty-gong</h1>
+<h2>Powtórka przez pytania i odpowiedzi</h2>
+<div id="loadfile">
+<label for="loader">Załaduj plik</label>
+<input type="file"
+		style="display: none;"
+       id="loader" name="loader"
+       accept=".json">
+<input type="button" value="Przeglądaj..." onclick="document.getElementById('loader').click();" /><input type="button" id="loadbtn" value="Załaduj" />
+</div>
+<div id="game">
+</br></br></br></br>
+<h2 id="questnum"></h2>
+<h2 id="TextToDisplay"></h2></br>
+<h3 id="expression"></h3>
+
+<div id="answerpart">
+<label for="useranswer">Twoja odpowiedź: </label>
+<input type="text" id="useranswer">
+<input type="button" value="Odpowiedz" onclick="answering()"></br></br>
+<input type="button" value="ä" id="ae" onclick="ae()">
+<input type="button" value="ö" id="oe" onclick="oe()">
+<input type="button" value="ü" id="ue" onclick="ue()">
+<input type="button" value="ß" id="ss" onclick="ss()">
+</div>
+<div id="infoans">
+<h2 id="isCorrect"></h2>
+<input type="button" id="continue" onclick="getquestion()" value="Kontynuuj"/>
+<h3>Poprawne odpowiedzi:</h3>
+<div id="correctanswers"></div>
+</div>
+</div>
+<div id="endstat">
+<h2>Koniec zestawu pytań!</h2></br>
+<h3 id="statcorrect"></h3>
+<h3 id="statcorrectperc"></h3>
+<h3 id="TimeElapsed"></h3>
+<input type="button" id="continuestat" onclick="confirmstat()" value="Kontynuuj"/>
+</div>
+</center>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</body>
+</html>
