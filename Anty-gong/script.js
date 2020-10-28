@@ -172,6 +172,3 @@ function ss()
 {
 	document.getElementById("useranswer").value = document.getElementById("useranswer").value + document.getElementById("ss").value;
 }
-
-
-
