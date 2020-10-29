@@ -1,4 +1,5 @@
 formatted = "";
+var synth = window.speechSynthesis;
 
 function before()
 {
@@ -91,6 +92,10 @@ function answering()
 		$('#infoans').show();
 		document.getElementById("isCorrect").innerHTML = "Odpowiedź niepoprawna!";
 		document.getElementById("isCorrect").style['-webkit-text-stroke-color'] = "red";
+		synth.cancel();
+		msg = new SpeechSynthesisUtterance("Deine Antwort ist falsch");
+		msg.lang = 'de';
+		synth.speak(msg);
 	}
 	else
 	{
@@ -99,9 +104,10 @@ function answering()
 		totalcorrect++;
 		document.getElementById("isCorrect").innerHTML = "Odpowiedź poprawna!";
 		document.getElementById("isCorrect").style['-webkit-text-stroke-color'] = "green";
-		var msg = new SpeechSynthesisUtterance(useranswer);
+		synth.cancel();
+		msg = new SpeechSynthesisUtterance(useranswer);
 		msg.lang = 'de';
-		window.speechSynthesis.speak(msg);
+		synth.speak(msg);
 	}
 	for(i=1; i<answers+1; i++)
 	{
