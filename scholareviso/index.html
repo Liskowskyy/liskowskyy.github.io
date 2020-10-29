@@ -10,8 +10,12 @@
 </head>
 <body onload="before()">
 <center>
+<div id="bgimg">
+</div>
+<div id="sitetitle">
 <h1>Scholareviso</h1>
 <h2>Powtórka przez pytania i odpowiedzi</h2>
+</div>
 <div id="loadfile">
 <label for="loader">Załaduj plik</label>
 <input type="file"
@@ -21,15 +25,15 @@
 <input type="button" value="Przeglądaj..." onclick="document.getElementById('loader').click();" /><input type="button" id="loadbtn" value="Załaduj" />
 </div>
 <div id="game">
-</br></br></br></br>
+<div id="infoquest">
 <h2 id="questnum"></h2>
 <h2 id="TextToDisplay"></h2></br>
 <h3 id="expression"></h3>
-
+</div>
 <div id="answerpart">
 <label for="useranswer">Twoja odpowiedź: </label>
 <input type="text" id="useranswer">
-<input type="button" value="Odpowiedz" onclick="answering()"></br></br>
+<input type="button" id="confirmanswer" value="Odpowiedz" onclick="answering()"></br></br>
 <input type="button" value="ä" id="ae" onclick="ae()">
 <input type="button" value="ö" id="oe" onclick="oe()">
 <input type="button" value="ü" id="ue" onclick="ue()">

@@ -172,3 +172,18 @@ function ss()
 {
 	document.getElementById("useranswer").value = document.getElementById("useranswer").value + document.getElementById("ss").value;
 }
+
+$(document).keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        if($(answerpart).is(":visible") == true)
+		{
+			$('#confirmanswer').click();
+		}
+		else if($(infoans).is(":visible") == true)
+		{
+			$('#continue').click();
+		}
+
+    }
+});
