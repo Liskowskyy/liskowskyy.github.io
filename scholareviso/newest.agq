@@ -1,0 +1,204 @@
+{
+	"settings":
+	{
+		"NumberOfQuestions": 32,
+		"TextToDisplay": "Jak brzmi to słowo lub wyrażenie po niemiecku?"
+	},
+	
+	"questions":
+	{
+			"1":
+			{
+			"answers": 1,
+			"expression": "Święto",
+			"1": "das Fest"
+			},
+			"2":
+			{
+			"answers": 1,
+			"expression": "Nowy Rok",
+			"1": "das Neujahr"
+			},
+			"3":
+			{
+			"answers": 1,
+			"expression": "Walentynki",
+			"1": "der Valentinstag"
+			},
+			"4":
+			{
+			"answers": 1,
+			"expression": "Dzień Kobiet",
+			"1": "der Frauentag"
+			},
+			"5":
+			{
+			"answers": 1,
+			"expression": "Wielkanoc",
+			"1": "das Ostern"
+			},
+			"6":
+			{
+			"answers": 1,
+			"expression": "Święto Pracy",
+			"1": "der Tag der Arbeit"
+			},
+			"7":
+			{
+			"answers": 1,
+			"expression": "Święto Konstytucji",
+			"1": "der Tag der Verfassung"
+			},
+			"8":
+			{
+			"answers": 1,
+			"expression": "Dzień Matki",
+			"1": "der Mutterstag"
+			},
+			"9":
+			{
+			"answers": 1,
+			"expression": "Wszystkich Świętych",
+			"1": "das Alleheiligen"
+			},
+			"10":
+			{
+			"answers": 1,
+			"expression": "Święto Niepodległości",
+			"1": "der Tag der Unabhängigkeit"
+			},
+			"11":
+			{
+			"answers": 1,
+			"expression": "Mikołajki",
+			"1": "der Nikolaustag"
+			},
+			"12":
+			{
+			"answers": 1,
+			"expression": "Wigilia",
+			"1": "der Heiligabend"
+			},
+			"13":
+			{
+			"answers": 1,
+			"expression": "Boże Narodzenie",
+			"1": "das Weinachten"
+			},
+			"14":
+			{
+			"answers": 1,
+			"expression": "Opis",
+			"1": "die Beschreibung"
+			},
+			"15":
+			{
+			"answers": 1,
+			"expression": "Wycieczka",
+			"1": "der Ausflug"
+			},
+			"16":
+			{
+			"answers": 1,
+			"expression": "Brzmieć",
+			"1": "lauten"
+			},
+			"17":
+			{
+			"answers": 1,
+			"expression": "Znaczenie",
+			"1": "die Bedeutung"
+			},
+			"18":
+			{
+			"answers": 1,
+			"expression": "Przemysł",
+			"1": "die Industrie"
+			},
+			"19":
+			{
+			"answers": 1,
+			"expression": "Gospodarka",
+			"1": "die Wirtschaft"
+			},
+			"20":
+			{
+			"answers": 1,
+			"expression": "Opowiadanie",
+			"1": "die Erzählung"
+			},
+			"21":
+			{
+			"answers": 1,
+			"expression": "Życie",
+			"1": "das Leben"
+			},
+			"22":
+			{
+			"answers": 1,
+			"expression": "Podobać się",
+			"1": "gefallen"
+			},
+			"23":
+			{
+			"answers": 1,
+			"expression": "Pusty",
+			"1": "leer"
+			},
+			"24":
+			{
+			"answers": 1,
+			"expression": "Długość",
+			"1": "die Länge"
+			},
+			"25":
+			{
+			"answers": 1,
+			"expression": "Głębokość",
+			"1": "die Tiefe"
+			},
+			"26":
+			{
+			"answers": 1,
+			"expression": "Wynosić",
+			"1": "betragen"
+			},
+			"27":
+			{
+			"answers": 1,
+			"expression": "Szeroki",
+			"1": "breit"
+			},
+			"28":
+			{
+			"answers": 1,
+			"expression": "Pokazywać",
+			"1": "zeigen"
+			},
+			"29":
+			{
+			"answers": 1,
+			"expression": "Rolnictwo",
+			"1": "die Landwirtschaft"
+			},
+			"30":
+			{
+			"answers": 1,
+			"expression": "Rozwinięty",
+			"1": "entwickelt"
+			},
+			"31":
+			{
+			"answers": 1,
+			"expression": "Właściciel",
+			"1": "der Besitzer"
+			},
+			"32":
+			{
+			"answers": 1,
+			"expression": "Odjazd",
+			"1": "die Abfahrt"
+			}
+	}
+
+}

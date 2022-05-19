@@ -6,6 +6,12 @@ function before() {
     $('#endstat').hide();
 }
 
+document.getElementById('autoloadbtn').onclick = function() {
+	var result = $.getJSON('newest.agq', function(data) {
+    console.log(data);
+})
+}
+
 document.getElementById('loadbtn').onclick = function() {
     var files = document.getElementById('loader').files;
     console.log(files);
