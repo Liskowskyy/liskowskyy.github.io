@@ -9,6 +9,7 @@ function before() {
 document.getElementById('autoloadbtn').onclick = function() {
 	var result = $.getJSON('newest.agq', function(data) {
     console.log(data);
+	console.log("works");
 })
 }
 
