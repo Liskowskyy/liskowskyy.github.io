@@ -7,7 +7,8 @@ function before() {
 }
 
 document.getElementById('autoloadbtn').onclick = function() {
-	var result = $.getJSON('newest.agq', function(formatted) {
+	var result = $.getJSON('newest.agq', function(data) {
+	formatted = data;
     $('#loadfile').hide();
     loaded = true;
     startgame();
