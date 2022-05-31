@@ -43,7 +43,10 @@ function startgame() {
     usedquestions = 0;
     $('#infoans').hide();
     $('#game').show();
-    questions = formatted.settings.NumberOfQuestions;
+    questions = Object.keys(formatted.questions).length;
+    console.log("Questions: "+questions);
+    ttsLang = formatted.settings.ttsLang;
+    speechOnWrong = formatted.settings.speechOnWrong;
     NotAsked = Array.from(Array(questions + 1).keys());
     NotAsked.shift();
     shuffleArray(NotAsked);
@@ -97,8 +100,8 @@ function answering() {
         document.getElementById("isCorrect").innerHTML = "Odpowiedź niepoprawna!";
         document.getElementById("isCorrect").style['-webkit-text-stroke-color'] = "red";
         synth.cancel();
-        msg = new SpeechSynthesisUtterance("Deine Antwort ist falsch");
-        msg.lang = 'de';
+        msg = new SpeechSynthesisUtterance(speechOnWrong);
+        msg.lang = ttsLang;
         synth.speak(msg);
     } else {
         $('#answerpart').hide();
@@ -108,7 +111,7 @@ function answering() {
         document.getElementById("isCorrect").style['-webkit-text-stroke-color'] = "green";
         synth.cancel();
         msg = new SpeechSynthesisUtterance(useranswer);
-        msg.lang = 'de';
+        msg.lang = ttsLang;
         synth.speak(msg);
     }
     for (i = 1; i < answers + 1; i++) {

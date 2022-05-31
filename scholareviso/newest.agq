@@ -2,6 +2,8 @@
 	"settings":
 	{
 		"NumberOfQuestions": 32,
+		"ttsLang" : "de",
+		"speechOnWrong": "Deine Antwort ist falsch",
 		"TextToDisplay": "Jak brzmi to słowo lub wyrażenie po niemiecku?"
 	},
 	
